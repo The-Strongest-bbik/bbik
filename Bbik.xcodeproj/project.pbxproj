@@ -14,7 +14,7 @@
 		E7D7D0AE2E0BCAF7001516AF /* Exceptions for "Bbik" folder in "Bbik" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				Application/Info.plist,
 			);
 			target = E7D7D09B2E0BCAF5001516AF /* Bbik */;
 		};
