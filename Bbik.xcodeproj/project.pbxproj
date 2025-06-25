@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E80F91682E0C1DD9005CF6AE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E80F91672E0C1DD9005CF6AE /* SnapKit */; };
+		E80F916D2E0C1E4B005CF6AE /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = E80F916C2E0C1E4B005CF6AE /* Then */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		E7D7D09C2E0BCAF5001516AF /* Bbik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bbik.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -14,7 +19,7 @@
 		E7D7D0AE2E0BCAF7001516AF /* Exceptions for "Bbik" folder in "Bbik" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				Application/Info.plist,
 			);
 			target = E7D7D09B2E0BCAF5001516AF /* Bbik */;
 		};
@@ -36,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E80F91682E0C1DD9005CF6AE /* SnapKit in Frameworks */,
+				E80F916D2E0C1E4B005CF6AE /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +75,7 @@
 				E7D7D0982E0BCAF5001516AF /* Sources */,
 				E7D7D0992E0BCAF5001516AF /* Frameworks */,
 				E7D7D09A2E0BCAF5001516AF /* Resources */,
+				E80F916E2E0C1F2E005CF6AE /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -78,6 +86,8 @@
 			);
 			name = Bbik;
 			packageProductDependencies = (
+				E80F91672E0C1DD9005CF6AE /* SnapKit */,
+				E80F916C2E0C1E4B005CF6AE /* Then */,
 			);
 			productName = Bbik;
 			productReference = E7D7D09C2E0BCAF5001516AF /* Bbik.app */;
@@ -107,6 +117,10 @@
 			);
 			mainGroup = E7D7D0932E0BCAF5001516AF;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E80F91662E0C1DD9005CF6AE /* XCRemoteSwiftPackageReference "SnapKit" */,
+				E80F916B2E0C1E4B005CF6AE /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E7D7D09D2E0BCAF5001516AF /* Products */;
 			projectDirPath = "";
@@ -127,6 +141,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E80F916E2E0C1F2E005CF6AE /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"  \nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E7D7D0982E0BCAF5001516AF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -146,7 +181,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Bbik/Info.plist;
+				INFOPLIST_FILE = Bbik/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -172,7 +207,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Bbik/Info.plist;
+				INFOPLIST_FILE = Bbik/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -331,6 +366,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E80F91662E0C1DD9005CF6AE /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		E80F916B2E0C1E4B005CF6AE /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E80F91672E0C1DD9005CF6AE /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E80F91662E0C1DD9005CF6AE /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		E80F916C2E0C1E4B005CF6AE /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E80F916B2E0C1E4B005CF6AE /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E7D7D0942E0BCAF5001516AF /* Project object */;
 }
