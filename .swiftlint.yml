@@ -1,0 +1,52 @@
+---
+# 검사할 경로 (소스 디렉토리)
+included:
+  - Bbik/Application
+  - Bbik/Source
+
+# 검사에서 제외할 경로 (외부 라이브러리, 설정 디렉토리 등)
+excluded:
+  - Pods
+  - Carthage
+  - .git
+  - .github
+  - fastlane
+  - DerivedData
+
+# 정적 분석(Analyze)에서만 작동하는 룰
+analyzer_rules:
+  - unused_declaration  # 사용되지 않는 변수/함수 감지
+
+# 비활성화할 기본 룰 목록
+disabled_rules:
+  - type_name                     # 타입 이름이 너무 길거나 짧으면 경고
+  - function_body_length          # 함수 길이 제한
+  - file_length                   # 파일 전체 길이 제한
+  - force_cast                    # as! 강제 캐스팅 사용 금지
+  - force_try                     # try! 사용 금지
+  - nesting                       # 중첩 코드(예: if 안의 if) 제한
+  - todo                          # // TODO 주석 감지
+  - comment_spacing               # 주석 앞 공백 없으면 경고
+  - inclusive_language            # 특정 표현 제한
+  - redundant_string_enum_value   # enum의 중복된 rawValue 경고
+  - empty_enum_arguments          # 빈 enum 파라미터 제한
+  - let_var_whitespace            # let/var 선언 간 공백 스타일
+
+# 유용한 opt-in 룰 활성화
+opt_in_rules:
+  - empty_count                   # count == 0 대신 isEmpty 권장
+  - explicit_init                 # 명시적 초기화 감지 (String("abc") 등)
+  - fatal_error_message           # fatalError에 메시지 누락 감지
+  - first_where                   # filter.first 대신 first(where:) 권장
+  - joined_default_parameter      # joined(separator: "") → joined() 가능
+  - private_action                # @IBAction은 private 권장
+  - private_outlet                # @IBOutlet은 private 권장
+  - vertical_whitespace           # 불필요한 빈 줄 감지
+  - yoda_condition                # 리터럴 == 변수 형태 제한
+
+# 줄 길이 설정
+line_length:
+  warning: 190                   # 190자 넘으면 경고
+  error: 200                     # 200자 넘으면 에러
+  ignores_comments: true        # 주석은 무시
+  ignores_urls: true            # URL은 무시
