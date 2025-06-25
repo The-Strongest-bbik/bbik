@@ -1,18 +1,9 @@
 ---
-name: feat issue template
-about: feat
-title: ''
+name: Feat issues 템플릿
+about: 새로운 기능 추가 관련 이슈입니다.
+title: "[Feat] "
 labels: "✨ Feat"
-assignees: ''
-
----
-
----
-name: "✨ 기능 요청 (Feature Request)"
-about: "새로운 기능에 대한 아이디어를 제안해주세요."
-title: "[Feature] "
-labels: "Feat"
-assignees: ''
+assignees: Lee-Tae-Yun, juseojo, rkgus24
 
 ---
 
