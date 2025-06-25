@@ -3,7 +3,7 @@ name: Feat issues 템플릿
 about: 새로운 기능 추가 관련 이슈입니다.
 title: "[Feat] "
 labels: "✨ Feat"
-assignees: Lee-Tae-Yun, juseojo, rkgus24
+assignees: juseojo, Lee-Tae-Yun, rkgus24
 
 ---
 
