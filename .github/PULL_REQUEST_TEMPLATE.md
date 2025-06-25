@@ -18,7 +18,8 @@ Closes #
 <br>
 
 ## ✅ 체크리스트
-- [ ] main 브랜치를 Pull 받았나요?
+- [ ] base 브랜치를 develop으로 설정했나요?
+- [ ] develop 브랜치를 Pull 받았나요?
 - [ ] PR의 라벨을 설정했나요?
 - [ ] assignee를 설정했나요?
 - [ ] reviewers를 설정했나요?
