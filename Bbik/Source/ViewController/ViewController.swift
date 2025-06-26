@@ -9,10 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+	override func loadView() {
+		view = ShopView()
+	}
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
-
     }
 
 }
