@@ -1,0 +1,110 @@
+{
+    "lunch": [
+        { "image": "https://drive.google.com/uc?export=view&id=1vIp5I0Ui5-WDge9FKa0hWM62GrQxi77B", "name": "오색 무지개 바람떡", "price": 4700,"stock": 30, "sales": 25 },
+        { "image": "https://drive.google.com/uc?export=view&id=1THiMUJj6k7wSGPFkilX6NPNxPWD42sbk", "name": "불고기 도시락", "price": 5200, "stock": 30, "sales": 18 },
+        { "image": " https://drive.google.com/uc?export=view&id=1dT7JxcOBtW-lgAmFs2xXGmyx-X12KrOs", "name": "제육 도시락", "price": 5800, "stock": 30, "sales": 30 },
+        { "image": "https://drive.google.com/uc?export=view&id=1KDuJpI9pXgHEfGSDkKxJI-rP4QddCYtO", "name": "치킨마요", "price": 4600, "stock": 30, "sales": 7 },
+        { "image": "https://drive.google.com/uc?export=view&id=1xaI8Y__uwefybUHlpRWAbkZdWqEyJfJl", "name": "참치마요", "price": 4500, "stock": 30, "sales": 22 },
+        { "image": "https://drive.google.com/uc?export=view&id=17qc-4kv0vv-eC0pql9LcBS_AjNI-ng8i", "name": "돈까스 도시락", "price": 4900, "stock": 30, "sales": 13 },
+        { "image": "https://drive.google.com/uc?export=view&id=1Wsk9PykKDMRBghOE0J8bwRWolEl9wEam", "name": "닭강정 도시락", "price": 6000, "stock": 30, "sales": 23 }
+    ],
+    "kimbap": [
+        { "image": " https://drive.google.com/uc?export=view&id=1qqkhVIzK52rF7I9mTwkZX98bL8BvvvCl", "name": "참치김밥", "price": 3000, "stock": 30, "sales": 21 },
+        { "image": "https://drive.google.com/uc?export=view&id=1dLO3acQ8f3taCYGA8xh2TqwLTfUKh9XL", "name": "새우김밥", "price": 2800, "stock": 30, "sales": 14 },
+        { "image": "https://drive.google.com/uc?export=view&id=1B42ONyHPqMOVl2GO1mXx0pPB5xeq1ZYi", "name": "치즈김밥", "price": 3500, "stock": 30, "sales": 10 },
+        { "image": "https://drive.google.com/uc?export=view&id=1QXwl0qRTEIzB_OnZ4D-kMxsL7jd46dtN", "name": "소고기김밥", "price": 4000, "stock": 30, "sales": 20 },
+        { "image": "https://drive.google.com/uc?export=view&id=1JMUoklEY5Mrt5K_m0QtSp1x_coyQw9w4", "name": "김치김밥", "price": 2500, "stock": 30, "sales": 15 },
+        { "image": "https://drive.google.com/uc?export=view&id=1GCcoCxtqETfUtyWLn6LFOWBYAqhL91D1", "name": "돈까스김밥", "price": 4000, "stock": 30, "sales": 30 },
+        { "image": "https://drive.google.com/uc?export=view&id=17BF76MyctksDhgCMNW1LbodF8NXghVoN", "name": "계란말이김밥", "price": 3200, "stock": 30, "sales": 16 }
+    ],
+    "burger": [
+        { "image": "https://drive.google.com/uc?export=view&id=1ktL8EKM-XMoIyQhBJl027dwOIOYOj9lI", "name": "불고기버거", "price": 5000, "stock": 30, "sales": 3 },
+        { "image": "https://drive.google.com/uc?export=view&id=14dwfU-FDSHqELhFFn681XBIO84LHjT-T", "name": "치즈버거", "price": 4500, "stock": 30, "sales": 6 },
+        { "image": "https://drive.google.com/uc?export=view&id=1owPP7MtBMga9fgE4oxRK5qf83VC9aC6a", "name": "새우버거", "price": 4000, "stock": 30, "sales": 21 },
+        { "image": "https://drive.google.com/uc?export=view&id=1ERqaEAZo9CqI7w-JAzOdHtRNjDCtnlsj", "name": "더블패티버거", "price": 5500, "stock": 30, "sales": 12 },
+        { "image": "https://drive.google.com/uc?export=view&id=1YIJIgReykRGZOI4SB7rlQa8BmbC3TWNY", "name": "치킨버거", "price": 5200, "stock": 30, "sales": 30 },
+        { "image": "https://drive.google.com/uc?export=view&id=1-6Nw8v7iU877BZHEq5chSBKCaPSnhwUI", "name": "베이컨버거", "price": 3500, "stock": 30, "sales": 12 },
+        { "image": "https://drive.google.com/uc?export=view&id=1klp4ynqvRKNG6IHzj8b26ZbrMF8fs0BW", "name": "핫치킨버거", "price": 4700, "stock": 30, "sales": 3 }
+    ],
+    "sandwich": [
+        { "image": "https://drive.google.com/uc?export=view&id=1jwnx3dF3r_zvsM8nO_37d3e2JPNIAJRg", "name": "에그샌드위치", "price": 4800, "stock": 30, "sales": 28 },
+        { "image": "https://drive.google.com/uc?export=view&id=1_2vszmf_lK899ST6ybDS0JZGtn8tCh7y", "name": "참치샌드위치", "price": 3000, "stock": 30, "sales": 0 },
+        { "image": "https://drive.google.com/uc?export=view&id=1rfzeAgu6UIdqoVH3v3YZ4S-9fdFfBLlS", "name": "치킨샌드위치", "price": 5000, "stock": 30, "sales": 18 },
+        { "image": "https://drive.google.com/uc?export=view&id=1p19IzmhMdMF1a4B-ExEAU17sRlleEgnd", "name": "햄치즈샌드위치", "price": 3500, "stock": 30, "sales": 11 },
+        { "image": "https://drive.google.com/uc?export=view&id=1o1Mx4JrEz9lUFKt-YCYchzA2_fdlcK2F", "name": "야채샌드위치", "price": 4000, "stock": 30, "sales": 15 },
+        { "image": "https://drive.google.com/uc?export=view&id=1whbNR6OFNlABDrHrpQCUTIpo66zlV8b_", "name": "클럽샌드위치", "price": 3200, "stock": 30, "sales": 3 },
+        { "image": "https://drive.google.com/uc?export=view&id=11mBprHB_Uuj2kHSVXY8klx4VDlfjEiTt", "name": "불고기샌드위치", "price": 3000, "stock": 30, "sales": 19 }
+    ],
+    "chicken": [
+        { "image": "https://drive.google.com/uc?export=view&id=1mhuxdPbs4sD0U151BnPeORZdMHoCFWFz", "name": "후라이드치킨", "price": 6000, "stock": 30, "sales": 30 },
+        { "image": "https://drive.google.com/uc?export=view&id=1-xb6UFd-J7JQjX8bKykvOijktUbsNZcC", "name": "양념치킨", "price": 6500, "stock": 30, "sales": 18 },
+        { "image": "https://drive.google.com/uc?export=view&id=1isH9KfoZyxUejs8MhvlwXGTvJu1jA4tk", "name": "간장치킨", "price": 5500, "stock": 30, "sales": 16 },
+        { "image": "https://drive.google.com/uc?export=view&id=1dWbpGCqN_fBMkjnLBIuABYMAqenH9DMT", "name": "마늘치킨", "price": 5200, "stock": 30, "sales": 5 },
+        { "image": "https://drive.google.com/uc?export=view&id=1oIZaNW40TM0w3mkby_FkF9Pqr0vs2rp9", "name": "허니버터치킨", "price": 7000, "stock": 30, "sales": 12 },
+        { "image": "https://drive.google.com/uc?export=view&id=1WROepdQ8UvTSzrqpkqnZSmnR5RBfwYur", "name": "핫양념치킨", "price": 5300, "stock": 30, "sales": 4 },
+        { "image": "https://drive.google.com/uc?export=view&id=16CdBTJqRQaJC3eWfVyih9-i8htryN8mz", "name": "순살치킨", "price": 5000, "stock": 30, "sales": 20 }
+    ],
+    "pizza": [
+        { "image": "https://drive.google.com/uc?export=view&id=11nnTWW_h81HWS6GEVRf-omd9F84SPRH3", "name": "불고기피자", "price": 6500, "stock": 30, "sales": 21 },
+        { "image": "https://drive.google.com/uc?export=view&id=1dlqw7i8M2C2srvs5nvrGdpG72rNcmbn_", "name": "치즈피자", "price": 5000, "stock": 30, "sales": 18 },
+        { "image": "https://drive.google.com/uc?export=view&id=1robDZDOcTYQhzPJ24s75QLs28EqyGtVQ", "name": "페퍼로니피자", "price": 7000, "stock": 30, "sales": 11 },
+        { "image": "https://drive.google.com/uc?export=view&id=1-ijbsiXHO8OTOACRINO7WqcCNia0zcI2", "name": "콤비네이션피자", "price": 5500, "stock": 30, "sales": 11 },
+        { "image": "https://drive.google.com/uc?export=view&id=163E2yABDqltuaRcgC7_DxSrCzO00skhm", "name": "고구마피자", "price": 6800, "stock": 30, "sales": 27 },
+        { "image": "https://drive.google.com/uc?export=view&id=1VC2keSkgkcAc-XBobTBuXpEXdIeICsNE", "name": "베이컨피자",  "price": 5200, "stock": 30, "sales": 8 },
+        { "image": "https://drive.google.com/uc?export=view&id=15LKXPmDvnW9Dk8ebu9l5WoMJss_Iy7oR", "name": "감자피자", "price": 5800, "stock": 30, "sales": 1 }
+    ],
+    "snack": [
+        { "image": "https://drive.google.com/uc?export=view&id=1AlEAtsJbejkARtxvex1O5U9T_X-6PY7w", "name": "초코파이", "price": 1500, "stock": 50, "sales": 13 },
+        { "image": "https://drive.google.com/uc?export=view&id=1V1vffJOegJsyO5iVjG_IiiHqy6_iSsoo", "name": "새우깡", "price": 2000, "stock": 50, "sales": 23 },
+        { "image": "https://drive.google.com/uc?export=view&id=1pcPprTkpve5N3zAVwflRF1qdZqo9GrgC", "name": "포카칩", "price": 2500, "stock": 50, "sales": 30 },
+        { "image": "https://drive.google.com/uc?export=view&id=1heHPw8viWT50xQjHelT_kqmUUN57GWxI", "name": "뺴뺴로", "price": 1800, "stock": 50, "sales": 11 },
+        { "image": "https://drive.google.com/uc?export=view&id=1XccF8vHQG9yehi92cDgAVfkX_tshJEdE", "name": "양파링", "price": 2500, "stock": 50, "sales": 27 },
+        { "image": "https://drive.google.com/uc?export=view&id=1qGDX5670OzvHsR2CRaiGjGvLTygiGu_A", "name": "허니버터칩", "price": 2000, "stock": 50, "sales": 1 },
+        { "image": "https://drive.google.com/uc?export=view&id=1jjl7_0X60C2anTM5fFjQnADb6Jj3_ILD", "name": "콘칩", "price": 1900, "stock": 50, "sales": 15 }
+    ],
+    "noodle": [
+        { "image": "https://drive.google.com/uc?export=view&id=1jZI0pnR6CnerV56xMuUmGaljdOsEPnmV", "name": "라면", "price": 3000, "stock": 30, "sales": 7 },
+        { "image": "https://drive.google.com/uc?export=view&id=1NNI3wKMW_0I7YfsGH4U-S6Nh13sLGQmv", "name": "우동", "price": 3000, "stock": 30, "sales": 11 },
+        { "image": "https://drive.google.com/uc?export=view&id=1tiPwly0N1kqrY6oYQbKs4qlrRyP6JcBB", "name": "쫄면", "price": 3500, "stock": 30, "sales": 19 },
+        { "image": "https://drive.google.com/uc?export=view&id=1PHljj9Ni5zPXxXZqVm7hcGBpqtS_FSwe", "name": "비빔면", "price": 2500, "stock": 30, "sales": 0 },
+        { "image": "https://drive.google.com/uc?export=view&id=1YXn_bDPASCZ78LJdsUdCIVm0TJP_gTIN", "name": "잔치국수", "price": 3800, "stock": 30, "sales": 22 },
+        { "image": "https://drive.google.com/uc?export=view&id=1fEy8wXoSXkccHGl23xRH2Hf_3ozO8Zzd", "name": "칼국수", "price": 3700, "stock": 30, "sales": 23 },
+        { "image": "https://drive.google.com/uc?export=view&id=1HKo_aqpTE2REiEpAvqHMlSlamgULLDvT", "name": "쌀국수", "price": 3200, "stock": 30, "sales": 7 }
+    ],
+    "bread": [
+        { "image": "https://drive.google.com/uc?export=view&id=1BO0Jt5pyauEQnvgQb42LdOv9P1leDCJ0", "name": "크림빵", "price": 2000, "stock": 30, "sales": 22 },
+        { "image": "https://drive.google.com/uc?export=view&id=1Ehr3R02hKPRPUooczE8irjqcLisOVa3w", "name": "단팥빵", "price": 2200, "stock": 30, "sales": 20 },
+        { "image": "https://drive.google.com/uc?export=view&id=1cJ9Jjy-PC-Nf-AnPLmbiliSSQQq8EteF", "name": "소보로빵", "price": 2500, "stock": 30, "sales": 15 },
+        { "image": "https://drive.google.com/uc?export=view&id=1ionnMPDzCyelTfj110gzk-tcozjyMYQS", "name": "식빵", "price": 2300, "stock": 30, "sales": 20 },
+        { "image": "https://drive.google.com/uc?export=view&id=1XeQ2K52Iio6opbQzps6K7YC2ce7ib31h", "name": "모닝빵", "price": 1800, "stock": 30, "sales": 6 },
+        { "image": "https://drive.google.com/uc?export=view&id=1q81R1JLEFqlo_l1fi4XYsthRW59i-x4C", "name": "피자빵", "price": 2800, "stock": 30, "sales": 11 },
+        { "image": "https://drive.google.com/uc?export=view&id=1A-O3Vp48Sqh_zzYKpTlrfuoZZnVDyDPy", "name": "버터프레첼", "price": 1700, "stock": 30, "sales": 3 }
+    ],
+    "icecream": [
+        { "image": "https://drive.google.com/uc?export=view&id=1mN0iVNNI19GScX8PdVdXxm1OZvawIKIm", "name": "바닐라아이스크림",  "price": 1800, "stock": 30, "sales": 23 },
+        { "image": "https://drive.google.com/uc?export=view&id=1FRmkAEQjT7Te1zxNKo0Af8sLhY9A1jVA", "name": "초코아이스크림", "price": 1700, "stock": 30, "sales": 19 },
+        { "image": "https://drive.google.com/uc?export=view&id=12rKR8JGam4oNeUP_CM2AoTQD8jpuYkKx", "name": "딸기아이스크림", "price": 1900, "stock": 30, "sales": 15 },
+        { "image": "https://drive.google.com/uc?export=view&id=1gs0musTqH-lZsfCxcMYu6er-x_tEcrjc", "name": "녹차아이스크림", "price": 1600, "stock": 30, "sales": 17 },
+        { "image": "https://drive.google.com/uc?export=view&id=1Dh7RMUJG8fPHF0Fbe-hY-HbVgrVb5Jr-", "name": "쿠키앤크림", "price": 1000, "stock": 30, "sales": 2 },
+        { "image": "https://drive.google.com/uc?export=view&id=1e0OUDjKzdtCdNs32y52arEFVK6LFzevH", "name": "메로나", "price": 2000, "stock": 30, "sales": 13 },
+        { "image": "https://drive.google.com/uc?export=view&id=1XvZrq_Rw4VDJ5zcD-q-OwNDW99bO9b4A", "name": "수박바", "price": 1500, "stock": 30, "sales": 30 }
+    ],
+    "drinks": [
+        { "image": "https://drive.google.com/uc?export=view&id=1MSCt8RwHZ_Uaz0BKtNNKYPFRm8d-UXxe", "name": "콜라", "price": 1500, "stock": 30, "sales": 14 },
+        { "image": "https://drive.google.com/uc?export=view&id=1HqLbi7_jydIJf-DKLLYFwJd8H453ejI_", "name": "사이다", "price": 1600, "stock": 30, "sales": 13 },
+        { "image": "https://drive.google.com/uc?export=view&id=1bfyODgc5fV1rOqPlAnxIZie46NhgXb3J", "name": "오렌지주스", "price": 1800, "stock": 30, "sales": 18 },
+        { "image": "https://drive.google.com/uc?export=view&id=1FyPwrQS_MbcqOgeUooVa5V70w8ZVA9du", "name": "포도주스", "price": 1400, "stock": 30, "sales": 4 },
+        { "image": "https://drive.google.com/uc?export=view&id=1bDSFi-X4k2uWNBHTln2gm81ggTH1WjIx", "name": "커피", "price": 2000, "stock": 30, "sales": 21 },
+        { "image": "https://drive.google.com/uc?export=view&id=1HXlEqx-SxCEHA-8PFQ0WFehEOcPwqPLc", "name": "아이스티", "price": 1900, "stock": 30, "sales": 18 },
+        { "image": "https://drive.google.com/uc?export=view&id=1_KOCNjVf9wsg2pqd7uEOxfDjksCZCZ8X", "name": "우유", "price": 1300, "stock": 30, "sales": 9 }
+    ],
+    "alcohol": [
+        { "image": "https://drive.google.com/uc?export=view&id=1Luk75R2zJyScSIWD5BqGb8bMZ4vfhbv9", "name": "소주", "price": 2000, "stock": 30, "sales": 2 },
+        { "image": "https://drive.google.com/uc?export=view&id=1MHAZwoAzVOsAPbVX9mFLo86NcS9Ry9Pe", "name": "맥주", "price": 4500, "stock": 30, "sales": 11 },
+        { "image": "https://drive.google.com/uc?export=view&id=1KPh45IHL44Xbu39fo-TkLkwn1YwkNlN1", "name": "막걸리", "price": 3500, "stock": 30, "sales": 3 },
+        { "image": "https://drive.google.com/uc?export=view&id=1pPMUtDuRtWBHDzrFqBRR93FhYE3UjJ1J", "name": "청하", "price": 3000, "stock": 30, "sales": 23 },
+        { "image": "https://drive.google.com/uc?export=view&id=1geSwweoNMH0YjdyYlOGl7FLKu1TkW40p", "name": "샴페인", "price": 4800, "stock": 30, "sales": 15 },
+        { "image": "https://drive.google.com/uc?export=view&id=1bJhORZ9bL32TbJ6tGvS-ouMbKuAUyUcW", "name": "위스키", "price": 5000, "stock": 30, "sales": 18 },
+        { "image": "https://drive.google.com/uc?export=view&id=1nKOqgySl5YvmgMOkQMLVCdqfU1h4AAZk", "name": "와인", "price": 2500, "stock": 30, "sales": 14 }
+    ]
+}
