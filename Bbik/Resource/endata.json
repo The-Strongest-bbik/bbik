@@ -1,0 +1,111 @@
+{
+    "lunch": [
+        { "image": "https://drive.google.com/uc?export=view&id=1vIp5I0Ui5-WDge9FKa0hWM62GrQxi77B", "name": "Five-colored rainbow wind rice cake", "price": 4700,"stock": 30, "sales": 25 },
+        { "image": "https://drive.google.com/uc?export=view&id=1THiMUJj6k7wSGPFkilX6NPNxPWD42sbk", "name": "Bulgogi Lunch Box", "price": 5200, "stock": 30, "sales": 18 },
+        { "image": " https://drive.google.com/uc?export=view&id=1dT7JxcOBtW-lgAmFs2xXGmyx-X12KrOs", "name": "Jeyuk Lunch Box", "price": 5800, "stock": 30, "sales": 30 },
+        { "image": "https://drive.google.com/uc?export=view&id=1KDuJpI9pXgHEfGSDkKxJI-rP4QddCYtO", "name": "Chicken Mayo", "price": 4600, "stock": 30, "sales": 7 },
+        { "image": "https://drive.google.com/uc?export=view&id=1xaI8Y__uwefybUHlpRWAbkZdWqEyJfJl", "name": "Chamchi Mayo", "price": 4500, "stock": 30, "sales": 22 },
+        { "image": "https://drive.google.com/uc?export=view&id=17qc-4kv0vv-eC0pql9LcBS_AjNI-ng8i", "name": "Pork Cutlet Lunch Box", "price": 4900, "stock": 30, "sales": 13 },
+        { "image": "https://drive.google.com/uc?export=view&id=1Wsk9PykKDMRBghOE0J8bwRWolEl9wEam", "name": "Chicken Gangjeong Lunch Box", "price": 6000, "stock": 30, "sales": 23 }
+    ],
+    "kimbap": [
+        { "image": " https://drive.google.com/uc?export=view&id=1qqkhVIzK52rF7I9mTwkZX98bL8BvvvCl", "name": "Chamchi Kimbab", "price": 3000, "stock": 30, "sales": 21 },
+        { "image": "https://drive.google.com/uc?export=view&id=1dLO3acQ8f3taCYGA8xh2TqwLTfUKh9XL", "name": "Shrimp Kimbap", "price": 2800, "stock": 30, "sales": 14 },
+        { "image": "https://drive.google.com/uc?export=view&id=1B42ONyHPqMOVl2GO1mXx0pPB5xeq1ZYi", "name": "Cheese Kimbap", "price": 3500, "stock": 30, "sales": 10 },
+        { "image": "https://drive.google.com/uc?export=view&id=1QXwl0qRTEIzB_OnZ4D-kMxsL7jd46dtN", "name": "Beef Kimbap", "price": 4000, "stock": 30, "sales": 20 },
+        { "image": "https://drive.google.com/uc?export=view&id=1JMUoklEY5Mrt5K_m0QtSp1x_coyQw9w4", "name": "Kimchi Kimbap", "price": 2500, "stock": 30, "sales": 15 },
+        { "image": "https://drive.google.com/uc?export=view&id=1GCcoCxtqETfUtyWLn6LFOWBYAqhL91D1", "name": "Pork Cutlet Kimbap", "price": 4000, "stock": 30, "sales": 30 },
+        { "image": "https://drive.google.com/uc?export=view&id=17BF76MyctksDhgCMNW1LbodF8NXghVoN", "name": "Egg Mayo Kimbap", "price": 3200, "stock": 30, "sales": 16 }
+    ],
+    "burger": [
+        { "image": "https://drive.google.com/uc?export=view&id=1ktL8EKM-XMoIyQhBJl027dwOIOYOj9lI", "name": "Bulgogi Burger", "price": 5000, "stock": 30, "sales": 3 },
+        { "image": "https://drive.google.com/uc?export=view&id=14dwfU-FDSHqELhFFn681XBIO84LHjT-T", "name": "Cheeseburger", "price": 4500, "stock": 30, "sales": 6 },
+        { "image": "https://drive.google.com/uc?export=view&id=1owPP7MtBMga9fgE4oxRK5qf83VC9aC6a", "name": "Shrimp Burger", "price": 4000, "stock": 30, "sales": 21 },
+        { "image": "https://drive.google.com/uc?export=view&id=1ERqaEAZo9CqI7w-JAzOdHtRNjDCtnlsj", "name": "Double Patty Burger", "price": 5500, "stock": 30, "sales": 12 },
+        { "image": "https://drive.google.com/uc?export=view&id=1YIJIgReykRGZOI4SB7rlQa8BmbC3TWNY", "name": "Chicken Burger", "price": 5200, "stock": 30, "sales": 30 },
+        { "image": "https://drive.google.com/uc?export=view&id=1-6Nw8v7iU877BZHEq5chSBKCaPSnhwUI", "name": "Bacon Burger", "price": 3500, "stock": 30, "sales": 12 },
+        { "image": "https://drive.google.com/uc?export=view&id=1klp4ynqvRKNG6IHzj8b26ZbrMF8fs0BW", "name": "Hot Chicken Burger", "price": 4700, "stock": 30, "sales": 3 }
+    ],
+    "sandwich": [
+        { "image": "https://drive.google.com/uc?export=view&id=1jwnx3dF3r_zvsM8nO_37d3e2JPNIAJRg", "name": "Egg Sandwich", "price": 4800, "stock": 30, "sales": 28 },
+        { "image": "https://drive.google.com/uc?export=view&id=1_2vszmf_lK899ST6ybDS0JZGtn8tCh7y", "name": "Tuna Sandwich", "price": 3000, "stock": 30, "sales": 0 },
+        { "image": "https://drive.google.com/uc?export=view&id=1rfzeAgu6UIdqoVH3v3YZ4S-9fdFfBLlS", "name": "Chicken Sandwich", "price": 5000, "stock": 30, "sales": 18 },
+        { "image": "https://drive.google.com/uc?export=view&id=1p19IzmhMdMF1a4B-ExEAU17sRlleEgnd", "name": "Ham Cheese Sandwich", "price": 3500, "stock": 30, "sales": 11 },
+        { "image": "https://drive.google.com/uc?export=view&id=1o1Mx4JrEz9lUFKt-YCYchzA2_fdlcK2F", "name": "Vegetable Sandwich", "price": 4000, "stock": 30, "sales": 15 },
+        { "image": "https://drive.google.com/uc?export=view&id=1whbNR6OFNlABDrHrpQCUTIpo66zlV8b_", "name": "Club Sandwich", "price": 3200, "stock": 30, "sales": 3 },
+        { "image": "https://drive.google.com/uc?export=view&id=11mBprHB_Uuj2kHSVXY8klx4VDlfjEiTt", "name": "Bulgogi Sandwich", "price": 3000, "stock": 30, "sales": 19 }
+    ],
+    "chicken": [
+        { "image": "https://drive.google.com/uc?export=view&id=1mhuxdPbs4sD0U151BnPeORZdMHoCFWFz", "name": "Fried Chicken", "price": 6000, "stock": 30, "sales": 30 },
+        { "image": "https://drive.google.com/uc?export=view&id=1-xb6UFd-J7JQjX8bKykvOijktUbsNZcC", "name": "Seasoned Chicken", "price": 6500, "stock": 30, "sales": 18 },
+        { "image": "https://drive.google.com/uc?export=view&id=1isH9KfoZyxUejs8MhvlwXGTvJu1jA4tk", "name": "Soy Sauce Chicken", "price": 5500, "stock": 30, "sales": 16 },
+        { "image": "https://drive.google.com/uc?export=view&id=1dWbpGCqN_fBMkjnLBIuABYMAqenH9DMT", "name": "Garlic Chicken", "price": 5200, "stock": 30, "sales": 5 },
+        { "image": "https://drive.google.com/uc?export=view&id=1oIZaNW40TM0w3mkby_FkF9Pqr0vs2rp9", "name": "Honey Butter Chicken", "price": 7000, "stock": 30, "sales": 12 },
+        { "image": "https://drive.google.com/uc?export=view&id=1WROepdQ8UvTSzrqpkqnZSmnR5RBfwYur", "name": "Hot Spicy Chicken", "price": 5300, "stock": 30, "sales": 4 },
+        { "image": "https://drive.google.com/uc?export=view&id=16CdBTJqRQaJC3eWfVyih9-i8htryN8mz", "name": "Boneless Chicken", "price": 5000, "stock": 30, "sales": 20 }
+    ],
+    "pizza": [
+        { "image": "https://drive.google.com/uc?export=view&id=11nnTWW_h81HWS6GEVRf-omd9F84SPRH3", "name": "Bulgogi Pizza", "price": 6500, "stock": 30, "sales": 21 },
+        { "image": "https://drive.google.com/uc?export=view&id=1dlqw7i8M2C2srvs5nvrGdpG72rNcmbn_", "name": "Cheese Pizza", "price": 5000, "stock": 30, "sales": 18 },
+        { "image": "https://drive.google.com/uc?export=view&id=1robDZDOcTYQhzPJ24s75QLs28EqyGtVQ", "name": "Pepperoni Pizza", "price": 7000, "stock": 30, "sales": 11 },
+        { "image": "https://drive.google.com/uc?export=view&id=1-ijbsiXHO8OTOACRINO7WqcCNia0zcI2", "name": "Combination Pizza", "price": 5500, "stock": 30, "sales": 11 },
+        { "image": "https://drive.google.com/uc?export=view&id=163E2yABDqltuaRcgC7_DxSrCzO00skhm", "name": "Sweet Potato Pizza", "price": 6800, "stock": 30, "sales": 27 },
+        { "image": "https://drive.google.com/uc?export=view&id=1VC2keSkgkcAc-XBobTBuXpEXdIeICsNE", "name": "Bacon Pizza", "price": 5200, "stock": 30, "sales": 8 },
+        { "image": "https://drive.google.com/uc?export=view&id=15LKXPmDvnW9Dk8ebu9l5WoMJss_Iy7oR", "name": "Potato Pizza", "price": 5800, "stock": 30, "sales": 1 }
+    ],
+    "snack": [
+        { "image": "https://drive.google.com/uc?export=view&id=1AlEAtsJbejkARtxvex1O5U9T_X-6PY7w", "name": "Choco Pie", "price": 1500, "stock": 30, "sales": 13 },
+        { "image": "https://drive.google.com/uc?export=view&id=1V1vffJOegJsyO5iVjG_IiiHqy6_iSsoo", "name": "Shrimp Crackers", "price": 2000, "stock": 30, "sales": 23 },
+        { "image": "https://drive.google.com/uc?export=view&id=1pcPprTkpve5N3zAVwflRF1qdZqo9GrgC", "name": "Potato Chips", "price": 2500, "stock": 30, "sales": 30 },
+        { "image": "https://drive.google.com/uc?export=view&id=1heHPw8viWT50xQjHelT_kqmUUN57GWxI", "name": "Pepero", "price": 1800, "stock": 30, "sales": 11 },
+        { "image": "https://drive.google.com/uc?export=view&id=1XccF8vHQG9yehi92cDgAVfkX_tshJEdE", "name": "Onion Rings", "price": 2500, "stock": 30, "sales": 27 },
+        { "image": "https://drive.google.com/uc?export=view&id=1qGDX5670OzvHsR2CRaiGjGvLTygiGu_A", "name": "Honey Butter Chips", "price": 2000, "stock": 30, "sales": 1 },
+        { "image": "https://drive.google.com/uc?export=view&id=1jjl7_0X60C2anTM5fFjQnADb6Jj3_ILD", "name": "Corn Chips", "price": 1900, "stock": 30, "sales": 15 }
+    ],
+    "noodle": [
+        { "image": "https://drive.google.com/uc?export=view&id=1jZI0pnR6CnerV56xMuUmGaljdOsEPnmV", "name": "Ramen", "price": 3000, "stock": 30, "sales": 7 },
+        { "image": "https://drive.google.com/uc?export=view&id=1NNI3wKMW_0I7YfsGH4U-S6Nh13sLGQmv", "name": "Udon", "price": 3000, "stock": 30, "sales": 11 },
+        { "image": "https://drive.google.com/uc?export=view&id=1tiPwly0N1kqrY6oYQbKs4qlrRyP6JcBB", "name": "Jjolmyeon", "price": 3500, "stock": 30, "sales": 19 },
+        { "image": "https://drive.google.com/uc?export=view&id=1PHljj9Ni5zPXxXZqVm7hcGBpqtS_FSwe", "name": "Bibim Noodles", "price": 2500, "stock": 30, "sales": 0 },
+        { "image": "https://drive.google.com/uc?export=view&id=1YXn_bDPASCZ78LJdsUdCIVm0TJP_gTIN", "name": "Banquet Noodles", "price": 3800, "stock": 30, "sales": 22 },
+        { "image": "https://drive.google.com/uc?export=view&id=1fEy8wXoSXkccHGl23xRH2Hf_3ozO8Zzd", "name": "Kalguksu", "price": 3700, "stock": 30, "sales": 23 },
+        { "image": "https://drive.google.com/uc?export=view&id=1HKo_aqpTE2REiEpAvqHMlSlamgULLDvT", "name": "Rice Noodles", "price": 3200, "stock": 30, "sales": 7 }
+    ],
+    "bread": [
+        { "image": "https://drive.google.com/uc?export=view&id=1BO0Jt5pyauEQnvgQb42LdOv9P1leDCJ0", "name": "Cream Bread", "price": 2000, "stock": 30, "sales": 22 },
+        { "image": "https://drive.google.com/uc?export=view&id=1Ehr3R02hKPRPUooczE8irjqcLisOVa3w", "name": "Red Bean Bread", "price": 2200, "stock": 30, "sales": 20 },
+        { "image": "https://drive.google.com/uc?export=view&id=1cJ9Jjy-PC-Nf-AnPLmbiliSSQQq8EteF", "name": "Soboro Bread", "price": 2500, "stock": 30, "sales": 15 },
+        { "image": "https://drive.google.com/uc?export=view&id=1ionnMPDzCyelTfj110gzk-tcozjyMYQS", "name": "White Bread", "price": 2300, "stock": 30, "sales": 20 },
+        { "image": "https://drive.google.com/uc?export=view&id=1XeQ2K52Iio6opbQzps6K7YC2ce7ib31h", "name": "Morning Bread", "price": 1800, "stock": 30, "sales": 6 },
+        { "image": "https://drive.google.com/uc?export=view&id=1q81R1JLEFqlo_l1fi4XYsthRW59i-x4C", "name": "Pizza Bread", "price": 2800, "stock": 30, "sales": 11 },
+        { "image": "https://drive.google.com/uc?export=view&id=1A-O3Vp48Sqh_zzYKpTlrfuoZZnVDyDPy", "name": "Butter Pretzel", "price": 1700, "stock": 30, "sales": 3 }
+    ],
+    "icecream": [
+        { "image": "https://drive.google.com/uc?export=view&id=1mN0iVNNI19GScX8PdVdXxm1OZvawIKIm", "name": "Vanilla Ice Cream", "price": 1800, "stock": 30, "sales": 23 },
+        { "image": "https://drive.google.com/uc?export=view&id=1FRmkAEQjT7Te1zxNKo0Af8sLhY9A1jVA", "name": "Chocolate Ice Cream", "price": 1700, "stock": 30, "sales": 19 },
+        { "image": "https://drive.google.com/uc?export=view&id=12rKR8JGam4oNeUP_CM2AoTQD8jpuYkKx", "name": "Strawberry Ice Cream", "price": 1900, "stock": 30, "sales": 15 },
+        { "image": "https://drive.google.com/uc?export=view&id=1gs0musTqH-lZsfCxcMYu6er-x_tEcrjc", "name": "Green Tea Ice Cream", "price": 1600, "stock": 30, "sales": 17 },
+        { "image": "https://drive.google.com/uc?export=view&id=1Dh7RMUJG8fPHF0Fbe-hY-HbVgrVb5Jr-", "name": "Cookies and Cream", "price": 1000, "stock": 30, "sales": 2 },
+        { "image": "https://drive.google.com/uc?export=view&id=1e0OUDjKzdtCdNs32y52arEFVK6LFzevH", "name": "Melona", "price": 2000, "stock": 30, "sales": 13 },
+        { "image": "https://drive.google.com/uc?export=view&id=1XvZrq_Rw4VDJ5zcD-q-OwNDW99bO9b4A", "name": "Watermelon Bar", "price": 1500, "stock": 30, "sales": 30 }
+    ],
+    "drinks": [
+        { "image": "https://drive.google.com/uc?export=view&id=1MSCt8RwHZ_Uaz0BKtNNKYPFRm8d-UXxe", "name": "Cola", "price": 1500, "stock": 30, "sales": 14 },
+        { "image": "https://drive.google.com/uc?export=view&id=1HqLbi7_jydIJf-DKLLYFwJd8H453ejI_", "name": "Cider", "price": 1600, "stock": 30, "sales": 13 },
+        { "image": "https://drive.google.com/uc?export=view&id=1bfyODgc5fV1rOqPlAnxIZie46NhgXb3J", "name": "Orange Juice", "price": 1800, "stock": 30, "sales": 18 },
+        { "image": "https://drive.google.com/uc?export=view&id=1FyPwrQS_MbcqOgeUooVa5V70w8ZVA9du", "name": "Grape Juice", "price": 1400, "stock": 30, "sales": 4 },
+        { "image": "https://drive.google.com/uc?export=view&id=1bDSFi-X4k2uWNBHTln2gm81ggTH1WjIx", "name": "Coffee", "price": 2000, "stock": 30, "sales": 21 },
+        { "image": "https://drive.google.com/uc?export=view&id=1HXlEqx-SxCEHA-8PFQ0WFehEOcPwqPLc", "name": "Iced Tea", "price": 1900, "stock": 30, "sales": 18 },
+        { "image": "https://drive.google.com/uc?export=view&id=1_KOCNjVf9wsg2pqd7uEOxfDjksCZCZ8X", "name": "Milk", "price": 1300, "stock": 30, "sales": 9 }
+    ],
+    "alcohol": [
+        { "image": "https://drive.google.com/uc?export=view&id=1Luk75R2zJyScSIWD5BqGb8bMZ4vfhbv9", "name": "Soju", "price": 2000, "stock": 30, "sales": 2 },
+        { "image": "https://drive.google.com/uc?export=view&id=1MHAZwoAzVOsAPbVX9mFLo86NcS9Ry9Pe", "name": "Beer", "price": 4500, "stock": 30, "sales": 11 },
+        { "image": "https://drive.google.com/uc?export=view&id=1KPh45IHL44Xbu39fo-TkLkwn1YwkNlN1", "name": "Makgeolli", "price": 3500, "stock": 30, "sales": 3 },
+        { "image": "https://drive.google.com/uc?export=view&id=1pPMUtDuRtWBHDzrFqBRR93FhYE3UjJ1J", "name": "Cheongha", "price": 3000, "stock": 30, "sales": 23 },
+        { "image": "https://drive.google.com/uc?export=view&id=1geSwweoNMH0YjdyYlOGl7FLKu1TkW40p", "name": "Champagne", "price": 4800, "stock": 30, "sales": 15 },
+        { "image": "https://drive.google.com/uc?export=view&id=1bJhORZ9bL32TbJ6tGvS-ouMbKuAUyUcW", "name": "Whisky", "price": 5000, "stock": 30, "sales": 18 },
+        { "image": "https://drive.google.com/uc?export=view&id=1nKOqgySl5YvmgMOkQMLVCdqfU1h4AAZk", "name": "Wine", "price": 2500, "stock": 30, "sales": 14 }
+    ]
+}
+
