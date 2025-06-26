@@ -3,7 +3,7 @@ name: Refactor issues 탬플릿
 about: 코드 구조 개선이 필요할때 사용하는 이슈입니다.
 title: "[Refactor] "
 labels: "⚒️ Refactor"
-assignees: Lee-Tae-Yun, juseojo, rkgus24
+assignees: juseojo, Lee-Tae-Yun, rkgus24
 
 ---
 
