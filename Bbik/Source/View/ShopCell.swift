@@ -23,8 +23,14 @@ class ShopCell: UICollectionViewCell {
 	}
 
 	let nameLabel = UILabel().then {
-		$0.font = .systemFont(ofSize: 14, weight: .medium)
-		$0.text = "testtt"
+		$0.font = .systemFont(ofSize: 16, weight: .semibold)
+		$0.text = "임시 텍스트입니다."
+	}
+
+	let priceLabel = UILabel().then {
+		$0.font = .systemFont(ofSize: 14, weight: .semibold)
+		$0.textColor = .systemGray
+		$0.text = "임시 텍스트입니다."
 	}
 
 	let indicatorView = UIActivityIndicatorView()
@@ -48,12 +54,13 @@ class ShopCell: UICollectionViewCell {
 		nameLabel.text = nil
 	}
 
-	func configure(imageURLStr: String, name: String) {
-		self.nameLabel.text = name
+	func configure(item: MenuData) {
+		self.nameLabel.text = item.name
+		self.priceLabel.text = String(item.price) + "원"
 		indicatorView.startAnimating()
 		imageLoadTask = Task { @MainActor in
 			do {
-				let image = try await fetchImageAsync(from: imageURLStr)
+				let image = try await fetchImageAsync(from: item.image)
 				guard !Task.isCancelled else { return }
 				imageView.image = image
 				indicatorView.stopAnimating()
@@ -79,17 +86,23 @@ class ShopCell: UICollectionViewCell {
 		contentView.addSubview(imageView)
 		contentView.addSubview(nameLabel)
 		contentView.addSubview(indicatorView)
+		contentView.addSubview(priceLabel)
 
 		nameLabel.snp.makeConstraints { make in
+			make.top.equalTo(imageView.snp.bottom).offset(4)
+			make.leading.trailing.equalToSuperview()
+		}
+
+		priceLabel.snp.makeConstraints { make in
+			make.top.equalTo(nameLabel.snp.bottom).offset(4)
 			make.leading.equalToSuperview()
-			make.bottom.trailing.equalToSuperview()
-			make.height.equalTo(20)
 		}
 
 		imageView.snp.makeConstraints { make in
-			make.height.equalTo(imageView.snp.width)
-			make.leading.trailing.equalToSuperview()
-			make.bottom.equalTo(nameLabel.snp.top)
+			make.top.centerX.equalToSuperview()
+			make.height.equalTo(
+				self.bounds.height - nameLabel.font.lineHeight - priceLabel.font.lineHeight - 8)
+			make.width.equalTo(imageView.snp.height)
 		}
 
 		indicatorView.snp.makeConstraints { make in

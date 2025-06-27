@@ -42,7 +42,7 @@ final class ShopView: UIView {
 		shopCollectionView.snp.makeConstraints { make in
 			make.top.equalTo(self.safeAreaLayoutGuide)
 			make.leading.trailing.equalToSuperview().inset(24)
-			make.height.equalTo(shopCollectionView.snp.width).multipliedBy(1.6)
+			make.height.equalTo(shopCollectionView.snp.width).multipliedBy(1.5)
 		}
 	}
 
@@ -50,8 +50,8 @@ final class ShopView: UIView {
 		addSubview(pageControl)
 
 		pageControl.snp.makeConstraints { make in
-			make.top.equalTo(shopCollectionView.snp.bottom).offset(4)
-			make.leading.trailing.bottom.equalToSuperview()
+			make.top.equalTo(shopCollectionView.snp.bottom).offset(16)
+			make.leading.trailing.equalToSuperview()
 		}
 	}
 
