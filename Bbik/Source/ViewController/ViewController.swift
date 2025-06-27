@@ -9,6 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
     private let shopService = ShopDataService()
+    private var selecteLanguage = Language.korean
+    private var selectedMenu = 0
+
 	let shopView = ShopView()
 	var shopData = [CategoryData]()
 
@@ -23,46 +26,25 @@ class ViewController: UIViewController {
 		shopView.shopCollectionView.delegate = self
         loadKrmenu()
     }
+
     func loadKrmenu() {
-        shopService.loadKrMenuData { result in
+        shopService.loadMenuData(language: selecteLanguage) { result in
             switch result {
             case .success(let categorys):
                 DispatchQueue.main.async {
 					self.shopData = categorys
-					self.updateData(self.shopData[2].menus)
+                    self.updateData(self.shopData[self.selectedMenu].menus)
                 }
-            case .failure(let error):
-                print("❌ 에러 발생: \(error)")
-                DispatchQueue.main.async {
-                    let alert = UIAlertController(title: "Error", message: "데이터를 불러오지 못했습니다.", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "확인", style: .default))
-                    self.present(alert, animated: true)
-                }
-            }
-        }
-    }
-    func loadEnmenu() {
-        shopService.loadKrMenuData { result in
-            switch result {
-            case .success(let categorys):
-                DispatchQueue.main.async {
-                    for category in categorys {
-                        print(category)
-                        for menu in category.menus {
-                            print("\(menu.name) \(menu.price)won")
-                        }
-                    }
-                }
-            case .failure(let error):
-                print("❌ 에러 발생: \(error)")
-                DispatchQueue.main.async {
-                    let alert = UIAlertController(title: "Error", message: "데이터를 불러오지 못했습니다.", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "확인", style: .default))
-                    self.present(alert, animated: true)
-                }
-            }
-        }
 
+            case .failure(let error):
+                print("❌ 에러 발생: \(error)")
+                DispatchQueue.main.async {
+                    let alert = UIAlertController(title: "Error", message: "데이터를 불러오지 못했습니다.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "확인", style: .default))
+                    self.present(alert, animated: true)
+                }
+            }
+        }
     }
 }
 
