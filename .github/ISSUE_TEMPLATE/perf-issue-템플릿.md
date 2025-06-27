@@ -3,7 +3,7 @@ name: Perf issue 템플릿
 about: 코드의 성능 개선을 제안할 때 사용하는 템플릿입니다.
 title: "[Perf] "
 labels: "\U0001F680 Perf"
-assignees: Lee-Tae-Yun, juseojo, rkgus24
+assignees: juseojo, Lee-Tae-Yun, rkgus24
 
 ---
 
