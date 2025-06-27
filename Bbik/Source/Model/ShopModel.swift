@@ -19,3 +19,27 @@ struct MenuData: Codable, Hashable {
     var stock: Int
     var sales: Int
 }
+
+enum Language: String {
+    case korean = "krdata"
+    case english = "endata"
+
+    var currencySymbol: String {
+        switch self {
+        case .korean: return "원"
+        case .english: return "won"
+        }
+    }
+    var stockText: String {
+        switch self {
+        case .korean: return "재고"
+        case .english: return "stock"
+        }
+    }
+    var totalText: String {
+        switch self {
+        case .korean: return "총합"
+        case .english: return "total"
+        }
+    }
+}
