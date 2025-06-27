@@ -19,8 +19,8 @@ final class ShopView: UIView {
 
 	let pageControl = UIPageControl().then {
 		$0.currentPage = 0
-		$0.pageIndicatorTintColor = .systemGray4
-		$0.currentPageIndicatorTintColor = .blue
+		$0.pageIndicatorTintColor = UIColor(red: 179 / 255, green: 216 / 255, blue: 1.0, alpha: 1.0)
+		$0.currentPageIndicatorTintColor = .mainBlue
 		$0.isUserInteractionEnabled = true
 	}
 
