@@ -9,11 +9,18 @@ import UIKit
 
 class ViewController: UIViewController {
     private let shopService = ShopDataService()
-    override func loadView() {
-        view = ShopView()
-    }
+	let shopView = ShopView()
+	var shopData = [CategoryData]()
+
+	private lazy var dataSource = makeCollectionViewDataSource(shopView.shopCollectionView)
+
+	override func loadView() {
+		view = shopView
+	}
+
     override func viewDidLoad() {
         super.viewDidLoad()
+		shopView.shopCollectionView.delegate = self
         loadKrmenu()
     }
     func loadKrmenu() {
@@ -21,12 +28,8 @@ class ViewController: UIViewController {
             switch result {
             case .success(let categorys):
                 DispatchQueue.main.async {
-                    for category in categorys {
-                        print(category.category)
-                        for menu in category.menus {
-                            print("\(menu.name) \(menu.price)원")
-                        }
-                    }
+					self.shopData = categorys
+					self.updateData(self.shopData[2].menus)
                 }
             case .failure(let error):
                 print("❌ 에러 발생: \(error)")
@@ -61,4 +64,41 @@ class ViewController: UIViewController {
         }
 
     }
+}
+
+extension ViewController: UICollectionViewDelegate {
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		guard let shopItem = dataSource.itemIdentifier(for: indexPath) else {
+			return
+		}
+
+		print("touch \(shopItem.name)")
+	}
+}
+
+extension ViewController {
+	private func updateData(_ data: [MenuData]) {
+		var snapshot = NSDiffableDataSourceSnapshot<Int, MenuData>()
+		snapshot.appendSections([0])
+		snapshot.appendItems(data, toSection: 0)
+		dataSource.apply(snapshot)
+
+		shopView.pageControl.numberOfPages = Int(ceil(Double(data.count) / 6.0))
+	}
+
+	private func makeCollectionViewDataSource(
+		_ collectionView: UICollectionView) -> UICollectionViewDiffableDataSource<Int, MenuData> {
+			let cellRegistration = UICollectionView.CellRegistration<ShopCell, MenuData> { cell, _, item in
+				cell.configure(item: item)
+			}
+
+			return UICollectionViewDiffableDataSource(collectionView: collectionView) { collectionView, indexPath, item in
+				collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: item)
+			}
+		}
+}
+
+@available(iOS 17.0, *)
+#Preview {
+	ViewController()
 }
