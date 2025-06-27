@@ -8,7 +8,7 @@ assignees: juseojo, Lee-Tae-Yun, rkgus24
 ---
 
 ## 브런치 이름
-Chore/#?-
+Add/#?-
 
 ## 📝 작업 내용
 > 요청하시는 작업 내용을 구체적으로 작성해주세요.
