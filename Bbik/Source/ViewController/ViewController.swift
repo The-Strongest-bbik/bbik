@@ -11,6 +11,8 @@ class ViewController: UIViewController {
     private let shopService = ShopDataService()
     private var selecteLanguage = Language.korean
     private var selectedMenu = -1
+    private var cartCount = 0
+    private var totalPrice: Int = 0
 
     let shopView = ShopView()
     var shopData = [CategoryData]()
@@ -56,6 +58,9 @@ extension ViewController: UICollectionViewDelegate {
             return
         }
 
+        cartCount += 1
+        totalPrice += shopItem.price
+        shopView.updateCart(count: cartCount, price: totalPrice)
         print("touch \(shopItem.name)")
     }
 }
@@ -96,7 +101,7 @@ extension ViewController {
         }
     // 카테고리 버튼에 액션을 연결하고, 현재 선택된 메뉴 상태를 초기 설정
     private func setupCategoryButtons() {
-            shopView.categorySteckView.arrangedSubviews.forEach {
+            shopView.categoryStackView.arrangedSubviews.forEach {
                 guard let button = $0 as? UIButton else { return }
                 button.addTarget(self, action: #selector(categoryButtonTapped(_:)), for: .touchUpInside)
             }
@@ -113,10 +118,10 @@ extension ViewController {
 
     // 선택된 카테고리 버튼의 텍스트 색상을 변경
     private func updateCategorySelection(for tag: Int) {
-        shopView.categorySteckView.arrangedSubviews.forEach {
+        shopView.categoryStackView.arrangedSubviews.forEach {
             guard let button = $0 as? UIButton else { return }
             let isSelected = (button.tag == tag)
-            button.setTitleColor(isSelected ? .systemBlue : .label, for: .normal)
+            button.setTitleColor(isSelected ? .mainBlue : .label, for: .normal)
         }
     }
 }

@@ -15,11 +15,15 @@ final class ShopView: UIView {
         $0.showsHorizontalScrollIndicator = false // 수평 스크롤바 안보이게 설정
         $0.showsVerticalScrollIndicator = false // 수직 스크롤바 안보이게 설정
     }
-    let categorySteckView = UIStackView().then {
+    let categoryStackView = UIStackView().then {
         $0.axis = .horizontal
         $0.distribution = .equalSpacing
         $0.spacing = 12
         $0.alignment = .center
+    }
+
+    let topSeparatorView = UIView().then {
+        $0.backgroundColor = .separator
     }
 
 	lazy var shopCollectionView = UICollectionView(frame: .zero, collectionViewLayout: makeCollectionViewLayout()).then {
@@ -34,6 +38,51 @@ final class ShopView: UIView {
 		$0.isUserInteractionEnabled = true
 	}
 
+    let bottomSeparatorView = UIView().then {
+        $0.backgroundColor = .separator
+    }
+
+    let bottomStackView = UIStackView().then {
+        $0.axis = .horizontal
+        $0.distribution = .fillEqually
+        $0.spacing = 12
+    }
+
+    let totalLabel = UILabel().then {
+        $0.font = .boldSystemFont(ofSize: 20)
+        $0.text = "0 원"
+    }
+
+    let cartButton = UIButton().then {
+        $0.backgroundColor = .mainBlue
+        $0.layer.cornerRadius = 8
+    }
+
+    let cartStackView = UIStackView().then {
+        $0.axis = .horizontal
+        $0.alignment = .center
+        $0.spacing = 8
+        $0.alignment = .center
+        $0.distribution = .equalCentering
+        $0.isUserInteractionEnabled = false
+    }
+
+    let cartCountLabel = UILabel().then {
+        $0.font = .boldSystemFont(ofSize: 14)
+        $0.backgroundColor = .white
+        $0.textColor = .mainBlue
+        $0.text = "0"
+        $0.textAlignment = .center
+        $0.layer.cornerRadius = 10
+        $0.clipsToBounds = true
+    }
+
+    let cartLabel = UILabel().then {
+        $0.text = "장바구니 보기"
+        $0.font = .systemFont(ofSize: 16)
+        $0.textColor = .white
+    }
+
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 
@@ -41,6 +90,7 @@ final class ShopView: UIView {
         setCategoryViewUI()
 		setCollectionViewUI()
 		setPageControlUI()
+        bottomCartStackViewUI()
 	}
 
 	required init?(coder: NSCoder) {
@@ -49,17 +99,25 @@ final class ShopView: UIView {
 
     private func setCategoryViewUI() {
         addSubview(categoryscrollView)
-        categoryscrollView.addSubview(categorySteckView)
+        categoryscrollView.addSubview(categoryStackView)
+
+        addSubview(topSeparatorView)
 
         categoryscrollView.snp.makeConstraints { make in
             make.top.equalTo(safeAreaLayoutGuide)
             make.leading.trailing.equalTo(safeAreaLayoutGuide).inset(24)
-            make.height.equalTo(categorySteckView.snp.height)
-            make.bottom.equalTo(categorySteckView.snp.bottom)
+            make.height.equalTo(categoryStackView.snp.height)
+            make.bottom.equalTo(categoryStackView.snp.bottom)
         }
 
-        categorySteckView.snp.makeConstraints { make in
+        categoryStackView.snp.makeConstraints { make in
             make.directionalEdges.equalToSuperview()
+        }
+
+        topSeparatorView.snp.makeConstraints { make in
+            make.top.equalTo(categoryStackView.snp.bottom).offset(4)
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(1) // 선의 두께
         }
     }
 
@@ -67,7 +125,7 @@ final class ShopView: UIView {
 		addSubview(shopCollectionView)
 
 		shopCollectionView.snp.makeConstraints { make in
-            make.top.equalTo(categorySteckView.snp.bottom)
+            make.top.equalTo(topSeparatorView.snp.bottom)
 			make.leading.trailing.equalToSuperview().inset(24)
 			make.height.equalTo(shopCollectionView.snp.width).multipliedBy(1.5)
 		}
@@ -81,6 +139,41 @@ final class ShopView: UIView {
 			make.leading.trailing.equalToSuperview()
 		}
 	}
+
+    private func bottomCartStackViewUI() {
+        addSubview(bottomSeparatorView)
+        addSubview(bottomStackView)
+        bottomStackView.addArrangedSubview(totalLabel)
+        bottomStackView.addArrangedSubview(cartButton)
+
+        cartButton.addSubview(cartStackView)
+
+        cartStackView.addArrangedSubview(cartCountLabel)
+        cartStackView.addArrangedSubview(cartLabel)
+
+        bottomSeparatorView.snp.makeConstraints { make in
+            make.top.equalTo(pageControl.snp.bottom).offset(4)
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(1) // 선의 두께
+        }
+
+        bottomStackView.snp.makeConstraints { make in
+            make.top.equalTo(bottomSeparatorView.snp.bottom).offset(16)
+            make.leading.trailing.equalToSuperview().inset(24)
+        }
+
+        cartButton.snp.makeConstraints { make in
+            make.height.equalTo(45)
+        }
+
+        cartStackView.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+        }
+
+        cartCountLabel.snp.makeConstraints { make in
+            make.width.height.equalTo(20)
+        }
+    }
 
 	private func makeCollectionViewLayout() -> UICollectionViewLayout {
 
@@ -123,11 +216,11 @@ final class ShopView: UIView {
 	}
 
     func setCategoryButtonsConfigure(_ categorys: [CategoryData]) {
-        categorySteckView.addArrangedSubview(createCategoryButton(title: "전체", tag: -1))
+        categoryStackView.addArrangedSubview(createCategoryButton(title: "전체", tag: -1))
 
         for (index, category) in categorys.enumerated() {
             let button = createCategoryButton(title: category.category, tag: index)
-            categorySteckView.addArrangedSubview(button)
+            categoryStackView.addArrangedSubview(button)
         }
     }
 
@@ -140,5 +233,10 @@ final class ShopView: UIView {
             $0.tag = tag
         }
         return button
+    }
+
+    func updateCart(count: Int, price: Int) {
+        cartCountLabel.text = "\(count)"
+        totalLabel.text = "\(price)원"
     }
 }
