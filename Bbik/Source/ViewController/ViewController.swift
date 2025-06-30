@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     private let shopService = ShopDataService()
+
     private var selectedMenu = -1
     private var cartCount = 0
     private var totalPrice: Int = 0
