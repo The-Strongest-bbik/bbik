@@ -66,10 +66,6 @@ extension ViewController: UICollectionViewDelegate {
 }
 
 extension ViewController {
-    private func makecategoryButtons() {
-        shopView.setCategoryButtonsConfigure(shopData)
-    }
-
     // 전체 카테고리 처리를 위한 함수
     private func updateSelectedMenuData() {
         if selectedMenu == -1 {
