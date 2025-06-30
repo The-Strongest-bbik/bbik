@@ -119,9 +119,9 @@ final class ShopView: UIView {
         backgroundColor = .systemBackground
         settingViewUI()
         setCategoryViewUI()
-        setCollectionViewUI()
-        setPageControlUI()
         bottomCartStackViewUI()
+		setPageControlUI()
+		setCollectionViewUI()
     }
 
     required init?(coder: NSCoder) {
@@ -191,17 +191,18 @@ final class ShopView: UIView {
         shopCollectionView.snp.makeConstraints { make in
             make.top.equalTo(topSeparatorView.snp.bottom)
             make.leading.trailing.equalToSuperview().inset(10)
-            make.height.equalTo(shopCollectionView.snp.width).multipliedBy(1.5)
+			make.bottom.equalTo(pageControl.snp.top).offset(-16)
         }
     }
 
     private func setPageControlUI() {
         addSubview(pageControl)
 
-        pageControl.snp.makeConstraints { make in
-            make.top.equalTo(shopCollectionView.snp.bottom).offset(16)
-            make.leading.trailing.equalToSuperview()
-        }
+		pageControl.snp.makeConstraints { make in
+			make.height.equalTo(26)
+			make.leading.trailing.equalToSuperview()
+			make.bottom.equalTo(bottomSeparatorView.snp.top).offset(-8)
+		}
     }
 
     private func bottomCartStackViewUI() {
@@ -216,13 +217,12 @@ final class ShopView: UIView {
         cartStackView.addArrangedSubview(cartLabel)
 
         bottomSeparatorView.snp.makeConstraints { make in
-            make.top.equalTo(pageControl.snp.bottom).offset(5)
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(1) // 선의 두께
+			make.bottom.equalTo(bottomStackView.snp.top).offset(-16)
         }
 
         bottomStackView.snp.makeConstraints { make in
-            make.top.equalTo(bottomSeparatorView.snp.bottom).offset(16)
             make.leading.trailing.equalToSuperview().inset(24)
             make.bottom.equalTo(safeAreaLayoutGuide).inset(10)
         }
