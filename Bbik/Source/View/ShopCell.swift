@@ -38,11 +38,13 @@ class ShopCell: UICollectionViewCell {
 	let hotImageView = UIImageView().then {
 		$0.image = UIImage(named: "hot")
 		$0.contentMode = .scaleAspectFit
+		$0.isHidden = true
 	}
 
 	let newImageView = UIImageView().then {
 		$0.image = UIImage(named: "new")
 		$0.contentMode = .scaleAspectFit
+		$0.isHidden = true
 	}
 
 	override init(frame: CGRect) {
@@ -62,11 +64,20 @@ class ShopCell: UICollectionViewCell {
 		imageLoadTask = nil
 		imageView.image = nil
 		nameLabel.text = nil
+		hotImageView.isHidden = true
+		newImageView.isHidden = true
 	}
 
 	func configure(item: MenuData) {
 		self.nameLabel.text = item.name
 		self.priceLabel.text = String(item.price) + " 원".localized()
+
+		if item.sales > 20 {
+			self.hotImageView.isHidden = false
+		} else if item.sales == 0 {
+			self.newImageView.isHidden = false
+		}
+
 		indicatorView.startAnimating()
 		imageLoadTask = Task { @MainActor in
 			do {
