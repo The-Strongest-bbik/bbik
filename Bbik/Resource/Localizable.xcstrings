@@ -12,6 +12,16 @@
         }
       }
     },
+    "%lld 원" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld Won"
+          }
+        }
+      }
+    },
     "원" : {
       "extractionState" : "manual",
       "localizations" : {

@@ -70,7 +70,7 @@ class ShopCell: UICollectionViewCell {
 
 	func configure(item: MenuData) {
 		self.nameLabel.text = item.name
-		self.priceLabel.text = String(item.price) + " 원".localized()
+		self.priceLabel.text = String(localized: "\(item.price) 원")
 
 		if item.sales > 20 {
 			self.hotImageView.isHidden = false
