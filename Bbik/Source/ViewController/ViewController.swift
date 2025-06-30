@@ -25,6 +25,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         shopView.shopCollectionView.delegate = self
+
+        shopView.darkModeButton.addTarget(self, action: #selector(setDarkModeButtonConfigure), for: .touchUpInside)
+        shopView.languageButton.addTarget(self, action: #selector(setLanguageButtonConfigure), for: .touchUpInside)
+
         loadmenu()
     }
 
@@ -119,6 +123,20 @@ extension ViewController {
             guard let button = $0 as? UIButton else { return }
             let isSelected = (button.tag == tag)
             button.setTitleColor(isSelected ? .mainBlue : .label, for: .normal)
+        }
+    }
+    @objc func setDarkModeButtonConfigure() {
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let window = windowScene.windows.first {
+            let currentStyle = window.overrideUserInterfaceStyle
+            window.overrideUserInterfaceStyle = (currentStyle == .dark) ? .light : .dark
+        }
+    }
+
+    @objc func setLanguageButtonConfigure() {
+        if let url = URL(string: UIApplication.openSettingsURLString),
+           UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url)
         }
     }
 }
