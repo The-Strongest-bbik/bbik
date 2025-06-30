@@ -50,7 +50,7 @@ final class ShopView: UIView {
 
     let totalLabel = UILabel().then {
         $0.font = .boldSystemFont(ofSize: 20)
-		$0.text = "0 " + "원".localized()
+		$0.text = String(localized: "\(0) 원")
     }
 
     let cartButton = UIButton().then {
@@ -78,7 +78,7 @@ final class ShopView: UIView {
     }
 
     let cartLabel = UILabel().then {
-		$0.text = "장바구니 보기".localized()
+		$0.text = String(localized: "장바구니 보기")
         $0.font = .systemFont(ofSize: 16)
         $0.textColor = .white
     }
@@ -216,7 +216,7 @@ final class ShopView: UIView {
     }
 
     func setCategoryButtonsConfigure(_ categorys: [CategoryData]) {
-		categoryStackView.addArrangedSubview(createCategoryButton(title: "전체".localized(), tag: -1))
+		categoryStackView.addArrangedSubview(createCategoryButton(title: String(localized: "전체"), tag: -1))
 
         for (index, category) in categorys.enumerated() {
             let button = createCategoryButton(title: category.category, tag: index)
@@ -237,6 +237,6 @@ final class ShopView: UIView {
 
     func updateCart(count: Int, price: Int) {
         cartCountLabel.text = "\(count)"
-		totalLabel.text = "\(price) " + "원".localized()
+		totalLabel.text = String(localized: "\(price) 원")
     }
 }
