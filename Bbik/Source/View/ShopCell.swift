@@ -35,6 +35,18 @@ class ShopCell: UICollectionViewCell {
 
 	let indicatorView = UIActivityIndicatorView()
 
+	let hotImageView = UIImageView().then {
+		$0.image = UIImage(named: "hot")
+		$0.contentMode = .scaleAspectFit
+		$0.isHidden = true
+	}
+
+	let newImageView = UIImageView().then {
+		$0.image = UIImage(named: "new")
+		$0.contentMode = .scaleAspectFit
+		$0.isHidden = true
+	}
+
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 
@@ -52,11 +64,20 @@ class ShopCell: UICollectionViewCell {
 		imageLoadTask = nil
 		imageView.image = nil
 		nameLabel.text = nil
+		hotImageView.isHidden = true
+		newImageView.isHidden = true
 	}
 
 	func configure(item: MenuData) {
 		self.nameLabel.text = item.name
 		self.priceLabel.text = String(item.price) + " 원".localized()
+
+		if item.sales > 20 {
+			self.hotImageView.isHidden = false
+		} else if item.sales == 0 {
+			self.newImageView.isHidden = false
+		}
+
 		indicatorView.startAnimating()
 		imageLoadTask = Task { @MainActor in
 			do {
@@ -87,6 +108,8 @@ class ShopCell: UICollectionViewCell {
 		contentView.addSubview(nameLabel)
 		contentView.addSubview(indicatorView)
 		contentView.addSubview(priceLabel)
+		contentView.addSubview(newImageView)
+		contentView.addSubview(hotImageView)
 
 		nameLabel.snp.makeConstraints { make in
 			make.top.equalTo(imageView.snp.bottom).offset(4)
@@ -96,6 +119,7 @@ class ShopCell: UICollectionViewCell {
 		priceLabel.snp.makeConstraints { make in
 			make.top.equalTo(nameLabel.snp.bottom).offset(4)
 			make.leading.equalToSuperview()
+			make.trailing.equalTo(hotImageView.snp.leading)
 		}
 
 		imageView.snp.makeConstraints { make in
@@ -107,6 +131,17 @@ class ShopCell: UICollectionViewCell {
 
 		indicatorView.snp.makeConstraints { make in
 			make.edges.equalTo(imageView)
+		}
+
+		hotImageView.snp.makeConstraints { make in
+			make.bottom.trailing.equalToSuperview()
+			make.top.equalTo(priceLabel)
+			make.width.equalTo(priceLabel.font.lineHeight * (959 / 605))
+		}
+
+		newImageView.snp.makeConstraints { make in
+			make.top.leading.equalTo(imageView)
+			make.width.height.equalTo(imageView).multipliedBy(0.3)
 		}
 	}
 }
