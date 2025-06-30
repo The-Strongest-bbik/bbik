@@ -9,7 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
     private let shopService = ShopDataService()
-    private var selecteLanguage = Language.korean
     private var selectedMenu = -1
     private var cartCount = 0
     private var totalPrice: Int = 0
@@ -30,7 +29,7 @@ class ViewController: UIViewController {
     }
 
     func loadmenu() {
-        shopService.loadMenuData(language: selecteLanguage) { result in
+        shopService.loadMenuData(language: Language.current) { result in
             switch result {
             case .success(let categorys):
                 DispatchQueue.main.async {
