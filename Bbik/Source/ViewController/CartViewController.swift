@@ -72,7 +72,7 @@ class CartViewController: UIViewController {
             cartView.tableView.backgroundView = nil
         }
     }
-    
+
     @objc private func paymentButtonTapped() {
         let alert = UIAlertController(title: nil, message: "결제하겠습니까?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "취소", style: .cancel))

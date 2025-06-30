@@ -26,10 +26,10 @@
     {
         "category": "Burger",
         "menus": [
-            { "image": "https://drive.google.com/uc?export=view&id=1ktL8EKM-XMoIyQhBJl027dwOIOYOj9lI", "name": "Bulgogi Burger", "price": 5000, "stock": 30, "sales": 3 },
-            { "image": "https://drive.google.com/uc?export=view&id=14dwfU-FDSHqELhFFn681XBIO84LHjT-T", "name": "Cheeseburger", "price": 4500, "stock": 30, "sales": 6 },
-            { "image": "https://drive.google.com/uc?export=view&id=1owPP7MtBMga9fgE4oxRK5qf83VC9aC6a", "name": "Shrimp Burger", "price": 4000, "stock": 30, "sales": 21 },
-            { "image": "https://drive.google.com/uc?export=view&id=1ERqaEAZo9CqI7w-JAzOdHtRNjDCtnlsj", "name": "Double Patty Burger", "price": 5500, "stock": 30, "sales": 12 },
+            { "image": "https://drive.google.com/uc?export=view&id=1VkmEuJp5ppwU2FPZ30VuQhfFz4ZdBDnW", "name": "Bulgogi Burger", "price": 5000, "stock": 30, "sales": 3 },
+            { "image": "https://drive.google.com/uc?export=view&id=1JC-ZONr0fGfycZ7rxmcPloCId1AGS-bu", "name": "Cheeseburger", "price": 4500, "stock": 30, "sales": 6 },
+            { "image": "https://drive.google.com/uc?export=view&id=1rHgzVuUybwo7DcJ94OPJSkNy0XTUseiX", "name": "Shrimp Burger", "price": 4000, "stock": 30, "sales": 21 },
+            { "image": "https://drive.google.com/uc?export=view&id=1UP03Bd5pIHj4yzTdCbogLfhJr14L68pR", "name": "Double Patty Burger", "price": 5500, "stock": 30, "sales": 12 },
             { "image": "https://drive.google.com/uc?export=view&id=1YIJIgReykRGZOI4SB7rlQa8BmbC3TWNY", "name": "Chicken Burger", "price": 5200, "stock": 30, "sales": 30 },
             { "image": "https://drive.google.com/uc?export=view&id=1-6Nw8v7iU877BZHEq5chSBKCaPSnhwUI", "name": "Bacon Burger", "price": 3500, "stock": 30, "sales": 12 },
             { "image": "https://drive.google.com/uc?export=view&id=1klp4ynqvRKNG6IHzj8b26ZbrMF8fs0BW", "name": "Hot Chicken Burger", "price": 4700, "stock": 30, "sales": 3 }
@@ -39,31 +39,31 @@
         "category": "Sandwich",
         "menus": [
             { "image": "https://drive.google.com/uc?export=view&id=1jwnx3dF3r_zvsM8nO_37d3e2JPNIAJRg", "name": "Egg Sandwich", "price": 4800, "stock": 30, "sales": 28 },
-            { "image": "https://drive.google.com/uc?export=view&id=1_2vszmf_lK899ST6ybDS0JZGtn8tCh7y", "name": "Tuna Sandwich", "price": 3000, "stock": 30, "sales": 0 },
+            { "image": "https://drive.google.com/uc?export=view&id=1KpCgc--CCPQzWdIg5-NxXjGgfslIPBeh", "name": "Tuna Sandwich", "price": 3000, "stock": 30, "sales": 0 },
             { "image": "https://drive.google.com/uc?export=view&id=1rfzeAgu6UIdqoVH3v3YZ4S-9fdFfBLlS", "name": "Chicken Sandwich", "price": 5000, "stock": 30, "sales": 18 },
             { "image": "https://drive.google.com/uc?export=view&id=1p19IzmhMdMF1a4B-ExEAU17sRlleEgnd", "name": "Ham Cheese Sandwich", "price": 3500, "stock": 30, "sales": 11 },
             { "image": "https://drive.google.com/uc?export=view&id=1o1Mx4JrEz9lUFKt-YCYchzA2_fdlcK2F", "name": "Vegetable Sandwich", "price": 4000, "stock": 30, "sales": 15 },
             { "image": "https://drive.google.com/uc?export=view&id=1whbNR6OFNlABDrHrpQCUTIpo66zlV8b_", "name": "Club Sandwich", "price": 3200, "stock": 30, "sales": 3 },
-            { "image": "https://drive.google.com/uc?export=view&id=11mBprHB_Uuj2kHSVXY8klx4VDlfjEiTt", "name": "Bulgogi Sandwich", "price": 3000, "stock": 30, "sales": 19 }
+            { "image": "https://drive.google.com/uc?export=view&id=1yAkCn3sa0Wxpimmgz1d9SX61-_pbrugP", "name": "Bulgogi Sandwich", "price": 3000, "stock": 30, "sales": 19 }
         ]
     },
     {
         "category": "Chicken",
         "menus": [
-            { "image": "https://drive.google.com/uc?export=view&id=1mhuxdPbs4sD0U151BnPeORZdMHoCFWFz", "name": "Fried Chicken", "price": 6000, "stock": 30, "sales": 30 },
-            { "image": "https://drive.google.com/uc?export=view&id=1-xb6UFd-J7JQjX8bKykvOijktUbsNZcC", "name": "Seasoned Chicken", "price": 6500, "stock": 30, "sales": 18 },
+            { "image": "https://drive.google.com/uc?export=view&id=1p_eGUR-vXoe-xYMHcljKODnuIASISfDt", "name": "Fried Chicken", "price": 6000, "stock": 30, "sales": 30 },
+            { "image": "https://drive.google.com/uc?export=view&id=1BhAMUZHHe6BG6LXE_S8FeWWOGfMMl8Je", "name": "Seasoned Chicken", "price": 6500, "stock": 30, "sales": 18 },
             { "image": "https://drive.google.com/uc?export=view&id=1isH9KfoZyxUejs8MhvlwXGTvJu1jA4tk", "name": "Soy Sauce Chicken", "price": 5500, "stock": 30, "sales": 16 },
             { "image": "https://drive.google.com/uc?export=view&id=1dWbpGCqN_fBMkjnLBIuABYMAqenH9DMT", "name": "Garlic Chicken", "price": 5200, "stock": 30, "sales": 5 },
-            { "image": "https://drive.google.com/uc?export=view&id=1oIZaNW40TM0w3mkby_FkF9Pqr0vs2rp9", "name": "Honey Butter Chicken", "price": 7000, "stock": 30, "sales": 12 },
-            { "image": "https://drive.google.com/uc?export=view&id=1WROepdQ8UvTSzrqpkqnZSmnR5RBfwYur", "name": "Hot Spicy Chicken", "price": 5300, "stock": 30, "sales": 4 },
+            { "image": "https://drive.google.com/uc?export=view&id=1pJHgQoTUaYTPZSGYhWk6ATrIvpk42GoY", "name": "Honey Butter Chicken", "price": 7000, "stock": 30, "sales": 12 },
+            { "image": "https://drive.google.com/uc?export=view&id=1T84Iri5wsCzDpcP14qg_9U8BSYw4wsal", "name": "Hot Spicy Chicken", "price": 5300, "stock": 30, "sales": 4 },
             { "image": "https://drive.google.com/uc?export=view&id=16CdBTJqRQaJC3eWfVyih9-i8htryN8mz", "name": "Boneless Chicken", "price": 5000, "stock": 30, "sales": 20 }
         ]
     },
     {
         "category": "Pizza",
         "menus": [
-            { "image": "https://drive.google.com/uc?export=view&id=11nnTWW_h81HWS6GEVRf-omd9F84SPRH3", "name": "Bulgogi Pizza", "price": 6500, "stock": 30, "sales": 21 },
-            { "image": "https://drive.google.com/uc?export=view&id=1dlqw7i8M2C2srvs5nvrGdpG72rNcmbn_", "name": "Cheese Pizza", "price": 5000, "stock": 30, "sales": 18 },
+            { "image": "https://drive.google.com/uc?export=view&id=1Fr7siZgocNPQOTB-hewQJi_j4Hw8Pkp2", "name": "Bulgogi Pizza", "price": 6500, "stock": 30, "sales": 21 },
+            { "image": "https://drive.google.com/uc?export=view&id=1v-UqCycshX5ENy-z_2VPqM3OfNludx8i", "name": "Cheese Pizza", "price": 5000, "stock": 30, "sales": 18 },
             { "image": "https://drive.google.com/uc?export=view&id=1robDZDOcTYQhzPJ24s75QLs28EqyGtVQ", "name": "Pepperoni Pizza", "price": 7000, "stock": 30, "sales": 11 },
             { "image": "https://drive.google.com/uc?export=view&id=1-ijbsiXHO8OTOACRINO7WqcCNia0zcI2", "name": "Combination Pizza", "price": 5500, "stock": 30, "sales": 11 },
             { "image": "https://drive.google.com/uc?export=view&id=163E2yABDqltuaRcgC7_DxSrCzO00skhm", "name": "Sweet Potato Pizza", "price": 6800, "stock": 30, "sales": 27 },
@@ -122,7 +122,7 @@
     {
         "category": "Drinks",
         "menus": [
-            { "image": "https://drive.google.com/uc?export=view&id=1MSCt8RwHZ_Uaz0BKtNNKYPFRm8d-UXxe", "name": "Cola", "price": 1500, "stock": 30, "sales": 14 },
+            { "image": "https://drive.google.com/uc?export=view&id=1j3SuWBArpvba0yROXGhGzcaSIfF13zSI", "name": "Cola", "price": 1500, "stock": 30, "sales": 14 },
             { "image": "https://drive.google.com/uc?export=view&id=1HqLbi7_jydIJf-DKLLYFwJd8H453ejI_", "name": "Cider", "price": 1600, "stock": 30, "sales": 13 },
             { "image": "https://drive.google.com/uc?export=view&id=1bfyODgc5fV1rOqPlAnxIZie46NhgXb3J", "name": "Orange Juice", "price": 1800, "stock": 30, "sales": 18 },
             { "image": "https://drive.google.com/uc?export=view&id=1FyPwrQS_MbcqOgeUooVa5V70w8ZVA9du", "name": "Grape Juice", "price": 1400, "stock": 30, "sales": 4 },
