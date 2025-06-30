@@ -109,6 +109,8 @@ extension ViewController {
         selectedMenu = sender.tag
         updateCategorySelection(for: selectedMenu)
         updateSelectedMenuData()
+        let firstIndexPath = IndexPath(item: 0, section: 0)
+        shopView.shopCollectionView.scrollToItem(at: firstIndexPath, at: .top, animated: true)
         print("선택된 카테고리 태그: \(selectedMenu)")
     }
 
