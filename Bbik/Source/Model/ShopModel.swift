@@ -1,11 +1,11 @@
 //
 //  ShopModel.swift
-
 //  Model.swift
 //  Bbik
 //
 //  Created by 이태윤 on 6/26/25.
 //
+import Foundation
 
 struct CategoryData: Codable, Hashable {
     var category: String
@@ -24,22 +24,16 @@ enum Language: String {
     case korean = "krdata"
     case english = "endata"
 
-    var currencySymbol: String {
-        switch self {
-        case .korean: return "원"
-        case .english: return "won"
+    static var current: Language {
+        if let lang = Locale.current.language.languageCode?.identifier {
+            if lang == "ko" { return .korean } else if
+                lang == "en" { return .english }
         }
-    }
-    var stockText: String {
-        switch self {
-        case .korean: return "재고"
-        case .english: return "stock"
+
+        if let region = Locale.current.region?.identifier {
+            if region == "KR" { return .korean } else if
+                region == "US" || region == "GB" { return .english }
         }
-    }
-    var totalText: String {
-        switch self {
-        case .korean: return "총합"
-        case .english: return "total"
-        }
+        return .korean
     }
 }
