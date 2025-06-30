@@ -11,6 +11,16 @@ import SnapKit
 import Then
 
 final class ShopView: UIView {
+    let categoryscrollView = UIScrollView().then {
+        $0.showsHorizontalScrollIndicator = false // 수평 스크롤바 안보이게 설정
+        $0.showsVerticalScrollIndicator = false // 수직 스크롤바 안보이게 설정
+    }
+    let categorySteckView = UIStackView().then {
+        $0.axis = .horizontal
+        $0.distribution = .equalSpacing
+        $0.spacing = 12
+        $0.alignment = .center
+    }
 
 	lazy var shopCollectionView = UICollectionView(frame: .zero, collectionViewLayout: makeCollectionViewLayout()).then {
 		$0.backgroundColor = .systemBackground
@@ -28,6 +38,7 @@ final class ShopView: UIView {
 		super.init(frame: frame)
 
 		backgroundColor = .systemBackground
+        setCategoryViewUI()
 		setCollectionViewUI()
 		setPageControlUI()
 	}
@@ -36,11 +47,27 @@ final class ShopView: UIView {
 		fatalError("init(coder:) has not been implemented")
 	}
 
+    private func setCategoryViewUI() {
+        addSubview(categoryscrollView)
+        categoryscrollView.addSubview(categorySteckView)
+
+        categoryscrollView.snp.makeConstraints { make in
+            make.top.equalTo(safeAreaLayoutGuide)
+            make.leading.trailing.equalTo(safeAreaLayoutGuide).inset(24)
+            make.height.equalTo(categorySteckView.snp.height)
+            make.bottom.equalTo(categorySteckView.snp.bottom)
+        }
+
+        categorySteckView.snp.makeConstraints { make in
+            make.directionalEdges.equalToSuperview()
+        }
+    }
+
 	private func setCollectionViewUI() {
 		addSubview(shopCollectionView)
 
 		shopCollectionView.snp.makeConstraints { make in
-			make.top.equalTo(self.safeAreaLayoutGuide)
+            make.top.equalTo(categorySteckView.snp.bottom)
 			make.leading.trailing.equalToSuperview().inset(24)
 			make.height.equalTo(shopCollectionView.snp.width).multipliedBy(1.5)
 		}
@@ -94,4 +121,24 @@ final class ShopView: UIView {
 
 		return UICollectionViewCompositionalLayout(section: section)
 	}
+
+    func setCategoryButtonsConfigure(_ categorys: [CategoryData]) {
+        categorySteckView.addArrangedSubview(createCategoryButton(title: "전체", tag: -1))
+
+        for (index, category) in categorys.enumerated() {
+            let button = createCategoryButton(title: category.category, tag: index)
+            categorySteckView.addArrangedSubview(button)
+        }
+    }
+
+    private func createCategoryButton(title: String, tag: Int) -> UIButton {
+        let button = UIButton().then {
+            $0.setTitle(title, for: .normal)
+            $0.titleLabel?.font = .boldSystemFont(ofSize: 16)
+            $0.titleLabel?.textAlignment = .center
+            $0.setTitleColor(.label, for: .normal)
+            $0.tag = tag
+        }
+        return button
+    }
 }
