@@ -1,11 +1,6 @@
-//
-//  ImageFetcher.swift
-//  Bbik
-//
-//  Created by seongjun cho on 6/26/25.
-//
-
 import UIKit
+
+private let imageCache = NSCache<NSString, UIImage>()
 
 enum ImageDownloadError: Error {
 	case invalidURL
@@ -15,6 +10,10 @@ enum ImageDownloadError: Error {
 }
 
 func fetchImageAsync(from urlString: String) async throws -> UIImage {
+	if let cachedImage = imageCache.object(forKey: urlString as NSString) {
+		return cachedImage
+	}
+
 	guard let url = URL(string: urlString) else {
 		throw ImageDownloadError.invalidURL
 	}
@@ -31,6 +30,7 @@ func fetchImageAsync(from urlString: String) async throws -> UIImage {
 			throw ImageDownloadError.invalidImageData
 		}
 
+		imageCache.setObject(image, forKey: urlString as NSString)
 		return image
 	} catch {
 		throw ImageDownloadError.networkError(error)
