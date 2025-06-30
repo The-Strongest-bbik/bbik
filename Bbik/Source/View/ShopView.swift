@@ -14,7 +14,7 @@ final class ShopView: UIView {
     let logoView = UIView()
 
     let logoImageView = UIImageView().then {
-        $0.image = UIImage(named: "logo")
+        $0.image = UIImage(named: "Logo")
         $0.contentMode = .scaleAspectFill
         $0.clipsToBounds = true
     }
