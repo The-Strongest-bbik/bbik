@@ -15,119 +15,212 @@ final class ShopView: UIView {
         $0.showsHorizontalScrollIndicator = false // 수평 스크롤바 안보이게 설정
         $0.showsVerticalScrollIndicator = false // 수직 스크롤바 안보이게 설정
     }
-    let categorySteckView = UIStackView().then {
+    let categoryStackView = UIStackView().then {
         $0.axis = .horizontal
         $0.distribution = .equalSpacing
         $0.spacing = 12
         $0.alignment = .center
     }
 
-	lazy var shopCollectionView = UICollectionView(frame: .zero, collectionViewLayout: makeCollectionViewLayout()).then {
-		$0.backgroundColor = .systemBackground
-		$0.showsHorizontalScrollIndicator = false
-	}
+    let topSeparatorView = UIView().then {
+        $0.backgroundColor = .separator
+    }
 
-	let pageControl = UIPageControl().then {
-		$0.currentPage = 0
-		$0.pageIndicatorTintColor = UIColor(red: 179 / 255, green: 216 / 255, blue: 1.0, alpha: 1.0)
-		$0.currentPageIndicatorTintColor = .mainBlue
-		$0.isUserInteractionEnabled = true
-	}
+    lazy var shopCollectionView = UICollectionView(frame: .zero, collectionViewLayout: makeCollectionViewLayout()).then {
+        $0.backgroundColor = .systemBackground
+        $0.showsHorizontalScrollIndicator = false
+    }
 
-	override init(frame: CGRect) {
-		super.init(frame: frame)
+    let pageControl = UIPageControl().then {
+        $0.currentPage = 0
+        $0.pageIndicatorTintColor = UIColor(red: 179 / 255, green: 216 / 255, blue: 1.0, alpha: 1.0)
+        $0.currentPageIndicatorTintColor = .mainBlue
+        $0.isUserInteractionEnabled = true
+    }
 
-		backgroundColor = .systemBackground
+    let bottomSeparatorView = UIView().then {
+        $0.backgroundColor = .separator
+    }
+
+    let bottomStackView = UIStackView().then {
+        $0.axis = .horizontal
+        $0.distribution = .fillEqually
+        $0.spacing = 12
+    }
+
+    let totalLabel = UILabel().then {
+        $0.font = .boldSystemFont(ofSize: 20)
+        $0.text = "0 원"
+    }
+
+    let cartButton = UIButton().then {
+        $0.backgroundColor = .mainBlue
+        $0.layer.cornerRadius = 8
+    }
+
+    let cartStackView = UIStackView().then {
+        $0.axis = .horizontal
+        $0.alignment = .center
+        $0.spacing = 8
+        $0.alignment = .center
+        $0.distribution = .equalCentering
+        $0.isUserInteractionEnabled = false
+    }
+
+    let cartCountLabel = UILabel().then {
+        $0.font = .boldSystemFont(ofSize: 14)
+        $0.backgroundColor = .white
+        $0.textColor = .mainBlue
+        $0.text = "0"
+        $0.textAlignment = .center
+        $0.layer.cornerRadius = 10
+        $0.clipsToBounds = true
+    }
+
+    let cartLabel = UILabel().then {
+        $0.text = "장바구니 보기"
+        $0.font = .systemFont(ofSize: 16)
+        $0.textColor = .white
+    }
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+
+        backgroundColor = .systemBackground
         setCategoryViewUI()
-		setCollectionViewUI()
-		setPageControlUI()
-	}
+        setCollectionViewUI()
+        setPageControlUI()
+        bottomCartStackViewUI()
+    }
 
-	required init?(coder: NSCoder) {
-		fatalError("init(coder:) has not been implemented")
-	}
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     private func setCategoryViewUI() {
         addSubview(categoryscrollView)
-        categoryscrollView.addSubview(categorySteckView)
+        categoryscrollView.addSubview(categoryStackView)
+
+        addSubview(topSeparatorView)
 
         categoryscrollView.snp.makeConstraints { make in
             make.top.equalTo(safeAreaLayoutGuide)
             make.leading.trailing.equalTo(safeAreaLayoutGuide).inset(24)
-            make.height.equalTo(categorySteckView.snp.height)
-            make.bottom.equalTo(categorySteckView.snp.bottom)
+            make.height.equalTo(categoryStackView.snp.height)
+            make.bottom.equalTo(categoryStackView.snp.bottom)
         }
 
-        categorySteckView.snp.makeConstraints { make in
+        categoryStackView.snp.makeConstraints { make in
             make.directionalEdges.equalToSuperview()
+        }
+
+        topSeparatorView.snp.makeConstraints { make in
+            make.top.equalTo(categoryStackView.snp.bottom).offset(4)
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(1) // 선의 두께
         }
     }
 
-	private func setCollectionViewUI() {
-		addSubview(shopCollectionView)
+    private func setCollectionViewUI() {
+        addSubview(shopCollectionView)
 
-		shopCollectionView.snp.makeConstraints { make in
-            make.top.equalTo(categorySteckView.snp.bottom)
-			make.leading.trailing.equalToSuperview().inset(24)
-			make.height.equalTo(shopCollectionView.snp.width).multipliedBy(1.5)
-		}
-	}
+        shopCollectionView.snp.makeConstraints { make in
+            make.top.equalTo(topSeparatorView.snp.bottom)
+            make.leading.trailing.equalToSuperview().inset(24)
+            make.height.equalTo(shopCollectionView.snp.width).multipliedBy(1.5)
+        }
+    }
 
-	private func setPageControlUI() {
-		addSubview(pageControl)
+    private func setPageControlUI() {
+        addSubview(pageControl)
 
-		pageControl.snp.makeConstraints { make in
-			make.top.equalTo(shopCollectionView.snp.bottom).offset(16)
-			make.leading.trailing.equalToSuperview()
-		}
-	}
+        pageControl.snp.makeConstraints { make in
+            make.top.equalTo(shopCollectionView.snp.bottom).offset(16)
+            make.leading.trailing.equalToSuperview()
+        }
+    }
 
-	private func makeCollectionViewLayout() -> UICollectionViewLayout {
+    private func bottomCartStackViewUI() {
+        addSubview(bottomSeparatorView)
+        addSubview(bottomStackView)
+        bottomStackView.addArrangedSubview(totalLabel)
+        bottomStackView.addArrangedSubview(cartButton)
 
-		let itemSize = NSCollectionLayoutSize(
-			widthDimension: .fractionalWidth(0.5),
-			heightDimension: .fractionalHeight(1.0)
-		)
+        cartButton.addSubview(cartStackView)
 
-		let item = NSCollectionLayoutItem(layoutSize: itemSize)
-		item.contentInsets = NSDirectionalEdgeInsets(top: 9, leading: 9, bottom: 10, trailing: 10)
+        cartStackView.addArrangedSubview(cartCountLabel)
+        cartStackView.addArrangedSubview(cartLabel)
 
-		let rowGroupSize = NSCollectionLayoutSize(
-			widthDimension: .fractionalWidth(1.0),
-			heightDimension: .fractionalHeight(1.0/3.0)
-		)
+        bottomSeparatorView.snp.makeConstraints { make in
+            make.top.equalTo(pageControl.snp.bottom).offset(4)
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(1) // 선의 두께
+        }
 
-		let rowGroup = NSCollectionLayoutGroup.horizontal(
-			layoutSize: rowGroupSize,
-			repeatingSubitem: item, count: 2
-		)
+        bottomStackView.snp.makeConstraints { make in
+            make.top.equalTo(bottomSeparatorView.snp.bottom).offset(16)
+            make.leading.trailing.equalToSuperview().inset(24)
+        }
 
-		let pageGroupSize = NSCollectionLayoutSize(
-			widthDimension: .fractionalWidth(1.0),
-			heightDimension: .fractionalHeight(1.0)
-		)
+        cartButton.snp.makeConstraints { make in
+            make.height.equalTo(45)
+        }
 
-		let pageGroup = NSCollectionLayoutGroup.vertical(
-			layoutSize: pageGroupSize,
-			repeatingSubitem: rowGroup, count: 3
-		)
+        cartStackView.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+        }
 
-		let section = NSCollectionLayoutSection(group: pageGroup)
-		section.orthogonalScrollingBehavior = .groupPagingCentered
-		section.visibleItemsInvalidationHandler = { [weak self] _, offset, _ in
-			let pageIndex = round(offset.x / (self?.shopCollectionView.frame.width)!)
-			self?.pageControl.currentPage = Int(pageIndex)
-		}
+        cartCountLabel.snp.makeConstraints { make in
+            make.width.height.equalTo(20)
+        }
+    }
 
-		return UICollectionViewCompositionalLayout(section: section)
-	}
+    private func makeCollectionViewLayout() -> UICollectionViewLayout {
+
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(0.5),
+            heightDimension: .fractionalHeight(1.0)
+        )
+
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 9, leading: 9, bottom: 10, trailing: 10)
+
+        let rowGroupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .fractionalHeight(1.0/3.0)
+        )
+
+        let rowGroup = NSCollectionLayoutGroup.horizontal(
+            layoutSize: rowGroupSize,
+            repeatingSubitem: item, count: 2
+        )
+
+        let pageGroupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .fractionalHeight(1.0)
+        )
+
+        let pageGroup = NSCollectionLayoutGroup.vertical(
+            layoutSize: pageGroupSize,
+            repeatingSubitem: rowGroup, count: 3
+        )
+
+        let section = NSCollectionLayoutSection(group: pageGroup)
+        section.orthogonalScrollingBehavior = .groupPagingCentered
+        section.visibleItemsInvalidationHandler = { [weak self] _, offset, _ in
+            let pageIndex = round(offset.x / (self?.shopCollectionView.frame.width)!)
+            self?.pageControl.currentPage = Int(pageIndex)
+        }
+
+        return UICollectionViewCompositionalLayout(section: section)
+    }
 
     func setCategoryButtonsConfigure(_ categorys: [CategoryData]) {
-        categorySteckView.addArrangedSubview(createCategoryButton(title: "전체", tag: -1))
+        categoryStackView.addArrangedSubview(createCategoryButton(title: "전체", tag: -1))
 
         for (index, category) in categorys.enumerated() {
             let button = createCategoryButton(title: category.category, tag: index)
-            categorySteckView.addArrangedSubview(button)
+            categoryStackView.addArrangedSubview(button)
         }
     }
 
@@ -140,5 +233,10 @@ final class ShopView: UIView {
             $0.tag = tag
         }
         return button
+    }
+
+    func updateCart(count: Int, price: Int) {
+        cartCountLabel.text = "\(count)"
+        totalLabel.text = "\(price)원"
     }
 }
