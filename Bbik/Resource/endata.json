@@ -14,7 +14,7 @@
     {
         "category": "Kimbap",
         "menus": [
-            { "image": " https://drive.google.com/uc?export=view&id=1qqkhVIzK52rF7I9mTwkZX98bL8BvvvCl", "name": "Chamchi Kimbab", "price": 3000, "stock": 30, "sales": 21 },
+            { "image": "https://drive.google.com/uc?export=view&id=1qqkhVIzK52rF7I9mTwkZX98bL8BvvvCl", "name": "Chamchi Kimbab", "price": 3000, "stock": 30, "sales": 21 },
             { "image": "https://drive.google.com/uc?export=view&id=1dLO3acQ8f3taCYGA8xh2TqwLTfUKh9XL", "name": "Shrimp Kimbap", "price": 2800, "stock": 30, "sales": 14 },
             { "image": "https://drive.google.com/uc?export=view&id=1B42ONyHPqMOVl2GO1mXx0pPB5xeq1ZYi", "name": "Cheese Kimbap", "price": 3500, "stock": 30, "sales": 10 },
             { "image": "https://drive.google.com/uc?export=view&id=1QXwl0qRTEIzB_OnZ4D-kMxsL7jd46dtN", "name": "Beef Kimbap", "price": 4000, "stock": 30, "sales": 20 },

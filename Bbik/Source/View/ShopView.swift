@@ -11,6 +11,36 @@ import SnapKit
 import Then
 
 final class ShopView: UIView {
+    let logoView = UIView()
+
+    let logoImageView = UIImageView().then {
+        $0.image = UIImage(named: "logo")
+        $0.contentMode = .scaleAspectFill
+        $0.clipsToBounds = true
+    }
+
+    let darkModeButton = UIButton().then {
+        let config = UIImage.SymbolConfiguration(pointSize: 16, weight: .bold)
+        $0.setImage(UIImage(systemName: "moon.fill", withConfiguration: config), for: .normal)
+        $0.clipsToBounds = true
+        $0.layer.cornerRadius = 12
+        $0.tintColor = .mainBlue
+        $0.backgroundColor = .clear
+        $0.layer.borderColor = UIColor.mainBlue.cgColor
+        $0.layer.borderWidth = 1
+    }
+
+    let languageButton = UIButton().then {
+        let config = UIImage.SymbolConfiguration(pointSize: 16, weight: .bold)
+        $0.setImage(UIImage(systemName: "gearshape.fill", withConfiguration: config), for: .normal)
+        $0.layer.cornerRadius = 12
+        $0.clipsToBounds = true
+        $0.tintColor = .mainBlue
+        $0.backgroundColor = .clear
+        $0.layer.borderColor = UIColor.mainBlue.cgColor
+        $0.layer.borderWidth = 1
+    }
+
     let categoryscrollView = UIScrollView().then {
         $0.showsHorizontalScrollIndicator = false // 수평 스크롤바 안보이게 설정
         $0.showsVerticalScrollIndicator = false // 수직 스크롤바 안보이게 설정
@@ -44,7 +74,7 @@ final class ShopView: UIView {
 
     let bottomStackView = UIStackView().then {
         $0.axis = .horizontal
-        $0.distribution = .fillEqually
+        $0.distribution = .fillProportionally
         $0.spacing = 12
     }
 
@@ -87,6 +117,7 @@ final class ShopView: UIView {
         super.init(frame: frame)
 
         backgroundColor = .systemBackground
+        settingViewUI()
         setCategoryViewUI()
         setCollectionViewUI()
         setPageControlUI()
@@ -97,6 +128,39 @@ final class ShopView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    private func settingViewUI() {
+        addSubview(logoView)
+
+        logoView.addSubview(logoImageView)
+        logoView.addSubview(darkModeButton)
+        logoView.addSubview(languageButton)
+
+        logoView.snp.makeConstraints { make in
+            make.top.equalTo(safeAreaLayoutGuide)
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(logoImageView)
+        }
+
+        logoImageView.snp.makeConstraints {
+            $0.top.equalToSuperview()
+            $0.centerX.equalToSuperview()
+            $0.width.equalTo(50)
+            $0.height.equalTo(logoImageView.snp.width).multipliedBy(1.2)
+        }
+
+        languageButton.snp.makeConstraints {
+            $0.bottom.equalTo(logoImageView)
+            $0.trailing.equalTo(logoView).inset(16)
+            $0.width.height.equalTo(24)
+        }
+
+        darkModeButton.snp.makeConstraints {
+            $0.centerY.equalTo(languageButton)
+            $0.trailing.equalTo(languageButton.snp.leading).offset(-12)
+            $0.width.height.equalTo(24)
+        }
+    }
+
     private func setCategoryViewUI() {
         addSubview(categoryscrollView)
         categoryscrollView.addSubview(categoryStackView)
@@ -104,8 +168,8 @@ final class ShopView: UIView {
         addSubview(topSeparatorView)
 
         categoryscrollView.snp.makeConstraints { make in
-            make.top.equalTo(safeAreaLayoutGuide)
-            make.leading.trailing.equalTo(safeAreaLayoutGuide).inset(24)
+            make.top.equalTo(logoView.snp.bottom)
+            make.leading.trailing.equalToSuperview().inset(24)
             make.height.equalTo(categoryStackView.snp.height)
             make.bottom.equalTo(categoryStackView.snp.bottom)
         }
@@ -115,7 +179,7 @@ final class ShopView: UIView {
         }
 
         topSeparatorView.snp.makeConstraints { make in
-            make.top.equalTo(categoryStackView.snp.bottom).offset(4)
+            make.top.equalTo(categoryStackView.snp.bottom)
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(1) // 선의 두께
         }
@@ -126,7 +190,7 @@ final class ShopView: UIView {
 
         shopCollectionView.snp.makeConstraints { make in
             make.top.equalTo(topSeparatorView.snp.bottom)
-            make.leading.trailing.equalToSuperview().inset(24)
+            make.leading.trailing.equalToSuperview().inset(10)
             make.height.equalTo(shopCollectionView.snp.width).multipliedBy(1.5)
         }
     }
@@ -152,7 +216,7 @@ final class ShopView: UIView {
         cartStackView.addArrangedSubview(cartLabel)
 
         bottomSeparatorView.snp.makeConstraints { make in
-            make.top.equalTo(pageControl.snp.bottom).offset(4)
+            make.top.equalTo(pageControl.snp.bottom).offset(5)
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(1) // 선의 두께
         }
@@ -160,6 +224,7 @@ final class ShopView: UIView {
         bottomStackView.snp.makeConstraints { make in
             make.top.equalTo(bottomSeparatorView.snp.bottom).offset(16)
             make.leading.trailing.equalToSuperview().inset(24)
+            make.bottom.equalTo(safeAreaLayoutGuide).inset(10)
         }
 
         cartButton.snp.makeConstraints { make in
