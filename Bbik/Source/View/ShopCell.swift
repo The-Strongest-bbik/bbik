@@ -35,6 +35,16 @@ class ShopCell: UICollectionViewCell {
 
 	let indicatorView = UIActivityIndicatorView()
 
+	let hotImageView = UIImageView().then {
+		$0.image = UIImage(named: "hot")
+		$0.contentMode = .scaleAspectFit
+	}
+
+	let newImageView = UIImageView().then {
+		$0.image = UIImage(named: "new")
+		$0.contentMode = .scaleAspectFit
+	}
+
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 
@@ -87,6 +97,8 @@ class ShopCell: UICollectionViewCell {
 		contentView.addSubview(nameLabel)
 		contentView.addSubview(indicatorView)
 		contentView.addSubview(priceLabel)
+		contentView.addSubview(newImageView)
+		contentView.addSubview(hotImageView)
 
 		nameLabel.snp.makeConstraints { make in
 			make.top.equalTo(imageView.snp.bottom).offset(4)
@@ -96,6 +108,7 @@ class ShopCell: UICollectionViewCell {
 		priceLabel.snp.makeConstraints { make in
 			make.top.equalTo(nameLabel.snp.bottom).offset(4)
 			make.leading.equalToSuperview()
+			make.trailing.equalTo(hotImageView.snp.leading)
 		}
 
 		imageView.snp.makeConstraints { make in
@@ -107,6 +120,17 @@ class ShopCell: UICollectionViewCell {
 
 		indicatorView.snp.makeConstraints { make in
 			make.edges.equalTo(imageView)
+		}
+
+		hotImageView.snp.makeConstraints { make in
+			make.bottom.trailing.equalToSuperview()
+			make.top.equalTo(priceLabel)
+			make.width.equalTo(priceLabel.font.lineHeight * (959 / 605))
+		}
+
+		newImageView.snp.makeConstraints { make in
+			make.top.leading.equalTo(imageView)
+			make.width.height.equalTo(imageView).multipliedBy(0.3)
 		}
 	}
 }
