@@ -35,7 +35,7 @@ final class ShopView: UIView {
         $0.currentPage = 0
         $0.pageIndicatorTintColor = UIColor(red: 179 / 255, green: 216 / 255, blue: 1.0, alpha: 1.0)
         $0.currentPageIndicatorTintColor = .mainBlue
-        $0.isUserInteractionEnabled = true
+        $0.isUserInteractionEnabled = false
     }
 
     let bottomSeparatorView = UIView().then {
