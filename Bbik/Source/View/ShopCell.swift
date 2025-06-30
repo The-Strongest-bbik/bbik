@@ -56,7 +56,7 @@ class ShopCell: UICollectionViewCell {
 
 	func configure(item: MenuData) {
 		self.nameLabel.text = item.name
-		self.priceLabel.text = String(item.price) + "원"
+		self.priceLabel.text = String(item.price) + " 원".localized()
 		indicatorView.startAnimating()
 		imageLoadTask = Task { @MainActor in
 			do {

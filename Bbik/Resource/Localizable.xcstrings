@@ -1,0 +1,50 @@
+{
+  "sourceLanguage" : "ko",
+  "strings" : {
+    " 원" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " Won"
+          }
+        }
+      }
+    },
+    "원" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Won"
+          }
+        }
+      }
+    },
+    "장바구니 보기" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View cart"
+          }
+        }
+      }
+    },
+    "전체" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Total"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
