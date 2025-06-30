@@ -1,18 +1,11 @@
-//
-//  ViewController.swift
-//  Bbik
-//
-//  Created by 이태윤 on 6/25/25.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
     private let shopService = ShopDataService()
 
     private var selectedMenu = -1
-    private var cartCount = 0
-    private var totalPrice: Int = 0
+
+    private let cartManager = CartManager.shared
 
     let shopView = ShopView()
     var shopData = [CategoryData]()
@@ -30,7 +23,11 @@ class ViewController: UIViewController {
         shopView.darkModeButton.addTarget(self, action: #selector(setDarkModeButtonConfigure), for: .touchUpInside)
         shopView.languageButton.addTarget(self, action: #selector(setLanguageButtonConfigure), for: .touchUpInside)
 
+        setupCartButton()
+        observeCartChanges()
         loadmenu()
+
+        navigationItem.backButtonTitle = "이전"
     }
 
     func loadmenu() {
@@ -54,6 +51,39 @@ class ViewController: UIViewController {
             }
         }
     }
+
+    private func setupCartButton() {
+        shopView.cartButton.addTarget(self, action: #selector(cartButtonTapped), for: .touchUpInside)
+    }
+
+    @objc private func cartButtonTapped() {
+        let cartViewController = CartViewController()
+        navigationController?.pushViewController(cartViewController, animated: true)
+    }
+
+    // MARK: - Cart Observer
+    private func observeCartChanges() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handleCartUpdate), name: .cartUpdated, object: nil)
+        // 초기 UI 세팅
+        handleCartUpdate()
+    }
+
+    @objc private func handleCartUpdate() {
+        shopView.updateCart(count: cartManager.totalQuantity, price: cartManager.totalPrice)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // ShopView 에서는 네비게이션 바를 숨깁니다.
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        handleCartUpdate()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // 다른 화면으로 이동할 때 네비게이션 바를 다시 표시합니다.
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
 }
 
 extension ViewController: UICollectionViewDelegate {
@@ -62,9 +92,7 @@ extension ViewController: UICollectionViewDelegate {
             return
         }
 
-        cartCount += 1
-        totalPrice += shopItem.price
-        shopView.updateCart(count: cartCount, price: totalPrice)
+        cartManager.add(shopItem)
         print("touch \(shopItem.name)")
     }
 }
@@ -114,7 +142,7 @@ extension ViewController {
         updateCategorySelection(for: selectedMenu)
         updateSelectedMenuData()
         let firstIndexPath = IndexPath(item: 0, section: 0)
-        shopView.shopCollectionView.scrollToItem(at: firstIndexPath, at: .top, animated: true)
+        shopView.shopCollectionView.scrollToItem(at: firstIndexPath, at: .left, animated: false)
         print("선택된 카테고리 태그: \(selectedMenu)")
     }
 

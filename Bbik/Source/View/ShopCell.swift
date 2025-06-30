@@ -1,10 +1,3 @@
-//
-//  ShopCell.swift
-//  Bbik
-//
-//  Created by seongjun cho on 6/26/25.
-//
-
 import UIKit
 
 import SnapKit

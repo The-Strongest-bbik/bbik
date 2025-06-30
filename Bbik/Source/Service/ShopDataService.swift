@@ -1,9 +1,3 @@
-//
-//  ShopDataService.swift
-//  Bbik
-//
-//  Created by 이태윤 on 6/27/25.
-//
 import Foundation
 
 class ShopDataService {

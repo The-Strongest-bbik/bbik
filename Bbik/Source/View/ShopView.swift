@@ -1,10 +1,3 @@
-//
-//  ShopView.swift
-//  Bbik
-//
-//  Created by seongjun cho on 6/26/25.
-//
-
 import UIKit
 
 import SnapKit
@@ -229,6 +222,7 @@ final class ShopView: UIView {
 
         cartButton.snp.makeConstraints { make in
             make.height.equalTo(45)
+            make.width.greaterThanOrEqualTo(140)
         }
 
         cartStackView.snp.makeConstraints { make in
@@ -238,6 +232,11 @@ final class ShopView: UIView {
         cartCountLabel.snp.makeConstraints { make in
             make.width.height.equalTo(20)
         }
+
+        cartButton.setContentHuggingPriority(.required, for: .horizontal)
+        cartButton.setContentCompressionResistancePriority(.required, for: .horizontal)
+        totalLabel.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        totalLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
     }
 
     private func makeCollectionViewLayout() -> UICollectionViewLayout {
