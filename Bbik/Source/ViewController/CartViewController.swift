@@ -27,7 +27,7 @@ class CartViewController: UIViewController {
         updateSummary()
         updateEmptyState()
         title = "장바구니"
-        
+
         cartView.paymentButton.addTarget(self, action: #selector(paymentButtonTapped), for: .touchUpInside)
     }
 
@@ -44,6 +44,7 @@ class CartViewController: UIViewController {
     private func setupTableView() {
         cartView.tableView.dataSource = self
         cartView.tableView.register(CartItemCell.self, forCellReuseIdentifier: CartItemCell.identifier)
+        cartView.tableView.showsVerticalScrollIndicator = false
     }
 
     private func updateSummary() {
