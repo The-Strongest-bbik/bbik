@@ -74,7 +74,7 @@ final class ShopView: UIView {
 
     let bottomStackView = UIStackView().then {
         $0.axis = .horizontal
-        $0.distribution = .fillProportionally
+        $0.distribution = .fillEqually
         $0.spacing = 12
     }
 
