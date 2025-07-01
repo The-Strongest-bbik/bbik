@@ -26,7 +26,7 @@ class CartView: UIView {
     }
 
     let paymentButton = UIButton(type: .system).then {
-        $0.setTitle("결제하기", for: .normal)
+        $0.setTitle(String(localized: "결제하기"), for: .normal)
         $0.titleLabel?.font = .systemFont(ofSize: 20, weight: .semibold)
         $0.setTitleColor(.white, for: .normal)
         $0.backgroundColor = .systemBlue
