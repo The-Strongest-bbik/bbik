@@ -41,7 +41,7 @@ final class CartManager {
     private func notifyUpdate() {
         NotificationCenter.default.post(name: .cartUpdated, object: nil)
     }
-    
+
     func clearCart() {
         items.removeAll()
         NotificationCenter.default.post(name: .cartUpdated, object: nil)
