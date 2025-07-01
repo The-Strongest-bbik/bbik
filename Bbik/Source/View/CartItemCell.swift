@@ -71,8 +71,8 @@ class CartItemCell: UITableViewCell {
 
 	func configure(with item: CartItemData) {
 		productNameLabel.text = item.menu.name
-		priceLabel.text = "가격 : \(item.menu.price.formattedWithSeparator)원"
-		totalPriceLabel.text = "\((item.menu.price * item.quantity).formattedWithSeparator)원"
+		priceLabel.text = String(localized: "가격 : \(item.menu.price.formattedWithSeparator)원")
+		totalPriceLabel.text = String(localized: "\((item.menu.price * item.quantity).formattedWithSeparator)원")
 		quantityControl.quantity = item.quantity
 
 		indicatorView.startAnimating()
