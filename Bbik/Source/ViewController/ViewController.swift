@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         observeCartChanges()
         loadmenu()
 
-        navigationItem.backButtonTitle = "이전"
+        navigationItem.backButtonTitle = String(localized: "이전")
     }
 
     func loadmenu() {

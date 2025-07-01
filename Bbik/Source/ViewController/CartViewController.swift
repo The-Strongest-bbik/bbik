@@ -9,7 +9,7 @@ class CartViewController: UIViewController {
 
     private let emptyLabel: UILabel = {
         let label = UILabel()
-        label.text = "텅"
+        label.text = String(localized: "텅")
         label.font = .systemFont(ofSize: 40, weight: .bold)
         label.textAlignment = .center
         label.textColor = .tertiaryLabel
@@ -26,7 +26,7 @@ class CartViewController: UIViewController {
         observeCartChanges()
         updateSummary()
         updateEmptyState()
-        title = "장바구니"
+        title = String(localized: "장바구니")
 
         cartView.paymentButton.addTarget(self, action: #selector(paymentButtonTapped), for: .touchUpInside)
     }
@@ -51,8 +51,8 @@ class CartViewController: UIViewController {
         let totalQuantity = cartManager.totalQuantity
         let totalPrice = cartManager.totalPrice
 
-        cartView.totalItemsLabel.text = "총 \(totalQuantity)개"
-        cartView.totalPriceLabel.text = "\(totalPrice.formattedWithSeparator) 원"
+        cartView.totalItemsLabel.text = String(localized: "총 \(totalQuantity)개")
+        cartView.totalPriceLabel.text = String(localized: "\(totalPrice.formattedWithSeparator) 원")
     }
 
     private func observeCartChanges() {
@@ -74,9 +74,9 @@ class CartViewController: UIViewController {
     }
 
     @objc private func paymentButtonTapped() {
-        let alert = UIAlertController(title: nil, message: "결제하겠습니까?", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "취소", style: .cancel))
-        alert.addAction(UIAlertAction(title: "확인", style: .default, handler: { [weak self] _ in
+        let alert = UIAlertController(title: nil, message: String(localized: "결제하겠습니까?"), preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: String(localized: "취소"), style: .cancel))
+        alert.addAction(UIAlertAction(title: String(localized: "확인"), style: .default, handler: { [weak self] _ in
             guard let self = self else { return }
             self.cartManager.clearCart()
             self.cartView.tableView.reloadData()
@@ -109,11 +109,11 @@ extension CartViewController: UITableViewDataSource {
         cell.quantityControl.onDecreaseToZero = { [weak self, weak cell] in
             guard let self = self, let cell = cell else { return }
             cell.quantityControl.quantity = 0
-            let alert = UIAlertController(title: nil, message: "장바구니에서 삭제하시겠습니까?", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "취소", style: .cancel, handler: { _ in
+            let alert = UIAlertController(title: nil, message: String(localized: "장바구니에서 삭제하시겠습니까?"), preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: String(localized: "취소"), style: .cancel, handler: { _ in
                 cell.quantityControl.quantity = 1
             }))
-            alert.addAction(UIAlertAction(title: "예", style: .destructive, handler: { _ in
+            alert.addAction(UIAlertAction(title: String(localized: "예"), style: .destructive, handler: { _ in
                 self.cartManager.updateQuantity(for: item.menu, quantity: 0)
             }))
             self.present(alert, animated: true)
